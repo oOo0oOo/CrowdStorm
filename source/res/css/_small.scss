@@ -1,0 +1,40 @@
+// Small layout 
+@media #{$small} {
+  .top-wrapper {
+    .header-section {
+      & > header {
+        & > .header-container {
+          & > .logo {
+            @include grid-column($columns: 3);
+            text-align: left;
+          }
+    
+          & > nav {
+            @include grid-column($columns: 9);
+            text-align: right;
+          }
+        }
+      }
+    }
+  }  
+  
+  .footer-section {
+    & > .footer-container {
+      & > .box-a {
+        @include grid-column($columns: 6);
+      }
+      
+      & > .box-b {
+        @include grid-column($columns: 6);
+      }
+      
+      & > .box-c {
+        @include grid-column($columns: 6);
+      }
+      
+      & > .box-d {
+        @include grid-column($columns: 6);
+      }
+    }
+  }
+}

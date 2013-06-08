@@ -1,0 +1,7 @@
+<nav>
+	<ul class="<%= nav.cssclass %>">
+		<% nav.links.each do |n| %>
+			<li><a href="<%= n.url %>"><%= n.text%></a></li>
+		<% end %>
+	</ul>
+</nav>

@@ -1,0 +1,20 @@
+carousel:
+  options: "resume_on_mouseout:true"
+  items:
+    - image: 
+        alt: Carousel Image 1
+        title: Carousel Image
+        src: http://placehold.it/1024x400
+        sizes:
+          - media: default
+            src: http://placehold.it/500x200
+          - media: small
+            src: http://placehold.it/1024x400
+          - media: large
+            src: http://placehold.it/1400x500
+      title: Test title
+      sub-title: This is a test sub title and can be a lead in text that is maybe a bit longer than expected
+      button:
+        icon: "&#xe0fc;"
+        text: Erfahren Sie mehr
+        href: "#"

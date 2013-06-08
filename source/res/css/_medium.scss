@@ -1,0 +1,54 @@
+// Medium layout 
+@media #{$medium} {
+  .top-wrapper {
+    .header-section {
+      & > header {
+        & > .header-container {
+          & > .logo {
+            @include grid-column($columns: 4);
+            text-align: left;
+          }
+          
+          & > nav {
+            @include grid-column($columns: 8);
+            text-align: right;
+          }
+        }
+      }
+    }
+    
+    .main-section {
+      & > aside.aside-a {
+        @include grid-column($columns: 4);
+      }
+      
+      & > .content {
+        @include grid-column($columns: 8);
+      }
+      
+      & > aside.aside-b {
+        @include grid-column($columns: 4);
+      }
+    }
+  }
+  
+  .footer-section {
+    & > .footer-container {
+      & > .box-a {
+        @include grid-column($columns: 3);
+      }
+      
+      & > .box-b {
+        @include grid-column($columns: 3);
+      }
+      
+      & > .box-c {
+        @include grid-column($columns: 3);
+      }
+      
+      & > .box-d {
+        @include grid-column($columns: 3);
+      }
+    }
+  }
+}

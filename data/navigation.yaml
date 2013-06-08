@@ -1,0 +1,11 @@
+main:
+  cssclass: main-navigation
+  links:
+  - text: Lorem ipsum
+    url: "#"
+  - text: Dolor sit
+    url: "#"
+  - text: Eirmod tempor
+    url: "#"
+  - text: Gubergren
+    url: "#"

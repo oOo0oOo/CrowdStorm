@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+@import "compass";
+@import "h5bp";
+
+@import "variables";
+@import "foundation/components/global";
+
+@import "foundation/components/visibility";
+@import "foundation/components/grid";
+@import "foundation/components/top-bar";
+@import "foundation/components/sub-nav";
+@import "foundation/components/orbit";
+
+@import "fonts";
+@import "spline";
+
+@include h5bp-normalize;
+
+@import "base";
+
+.test {
+    @include spline-button($icon: "\e005");
+}
+
+// Basic layout mobile first
+.key-visual-section {
+  margin: 0 auto;
+  max-width: emCalc(1920px);
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0px 0px 5px);
+  border-top: 1px solid shade($agevo-grey, 10%);
+  border-bottom: 1px solid shade($agevo-grey, 10%);
+  margin-bottom: 3em;
+  
+  & > figure {
+    width: 100%;
+    
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+.carousel-section {
+  margin: 0 auto;
+  max-width: emCalc(1200px);
+  margin-bottom: 3em;
+  
+  .slideshow-wrapper {
+    .orbit-container {
+      & > ul[data-orbit] {
+        
+        & > .orbit-slide-number {
+          display: none;
+        }
+        
+        & > .orbit-bullets {
+          text-align: center;
+          
+          & > li {
+            display: inline-block;
+            float: none;
+            margin-right: 1em;
+          }
+        }
+        
+        & > li {
+          & > figure {
+            width: 100%;
+            
+            & > img {
+              width: 100%;
+            }
+          } 
+          
+          & > .orbit-caption {
+            & > .read-more {
+              @include spline-button($color: $agevo-primary-color, $icon: attr(data-icon), $icon-size: 1.5em, $icon-vertical-align: middle);
+              margin-top: 1em;
+              margin-bottom: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.top-wrapper {
+  background-color: #fff;
+  @include box-shadow(rgba(0, 0, 0, 0.5) 0px 0px 5px);
+  
+  & > .top-bar {
+    @include box-shadow(rgba(0, 0, 0, 0.2) 0px 0px 5px);
+    @include box-sizing(content-box);
+    text-shadow: 0 1px 0 white;
+    border-bottom: 1px solid shade($agevo-grey, 10%);
+  }
+  
+  & > .header-section {
+  	@include grid-row();
+  	
+  	& > header {
+  		@include grid-column($columns: 12);
+  		
+  		& > .header-container {
+        @include grid-row($behavior: nest);
+  		
+    		& > .logo {
+    		  @include grid-column($columns: 12);
+    		  text-align: center;
+    		  
+    		  & > img {
+    		    display: inline-block;
+    		  }
+    		}
+  
+  		  & > nav {
+          @include grid-column($columns: 12);
+          text-align: center;
+          
+          & > ul.main-navigation {
+            display: inline-table;
+            table-layout: fixed;
+    
+            & > li {
+              display: table-cell;
+              vertical-align: middle;
+              padding-right: 2em;
+              
+              &:last-child {
+                padding: 0;
+              }
+              
+              & > a {
+                font-size: emCalc(17px);
+              }
+            }
+          }
+        }
+      }
+  	}
+  }
+  
+  .main-section {
+    @include grid-row();
+    padding-bottom: 3em;
+    
+    & > header {
+      @include grid-column($columns: 12);
+    }
+    
+    & > aside.aside-a {
+      @include grid-column($columns: 12);
+    }
+    
+    & > .content {
+      @include grid-column($columns: 12);
+    }
+    
+    & > aside.aside-b {
+      @include grid-column($columns: 12);
+    }
+  }
+}
+  
+.footer-section {
+  margin: 0 auto;
+  width: 100%;
+  color: tint($agevo-footer-color, 80%);
+  padding-bottom: 1em;
+  @include text-shadow(0 1px 0 shade($agevo-footer-color, 50%));
+  
+  & > .footer-container {
+    @include grid-row();
+    
+    & > .box-a {
+      @include grid-column($columns: 12);
+    }
+    
+    & > .box-b {
+      @include grid-column($columns: 12);
+    }
+    
+    & > .box-c {
+      @include grid-column($columns: 12);
+    }
+    
+    & > .box-d {
+      @include grid-column($columns: 12);
+    }
+  }
+}
+
+@import "small";
+@import "medium";
+
+// inlcude webfont at latest point possible
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600");

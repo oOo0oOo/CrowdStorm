@@ -1,0 +1,4 @@
+<figure<%= (not interchange_image.title.nil?) ? ' title="' + interchange_image.title + '"' : ''%>>
+	<img src="<%= interchange_image.src %>" alt="<%= interchange_image.alt %>" 
+		data-interchange="<% interchange_image.sizes.each do |size| %>[<%= size.src %>, (<%= size.media %>)],<% end %>"/>
+</figure>

@@ -1,0 +1,16 @@
+---
+title: Our services
+---
+
+<% content_for :header_visual do %>
+	<%= partial(:'partials/image/interchange_image', :locals => { :interchange_image => data.page_services['key-visual'] }) %>
+<% end %>
+
+<div class="services">
+  <h2><%= lorem.word.titlecase %></h2>
+  <p><%= lorem.paragraph %></p>
+  <h3><%= lorem.word.titlecase %></h3>
+  <p><%= lorem.paragraph %></p>
+  <h4><%= lorem.word.titlecase %></h4>
+  <p><%= lorem.paragraph %></p>
+</div>

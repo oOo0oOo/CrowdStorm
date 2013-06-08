@@ -1,0 +1,114 @@
+$spline-icon-font: 'agevo-icons';
+
+@mixin spline-icon($icon, $icon-size: false, $icon-vertical-align: false, $icon-float: false) {
+  font-family: $spline-icon-font;
+  content: $icon;
+  line-height: 1;
+  
+  @if $icon-float {
+    float: $icon-float;
+  }
+  
+  @if $icon-vertical-align {
+    vertical-align: $icon-vertical-align;
+  }
+  
+  @if $icon-size {
+    font-size: $icon-size;
+  }
+}
+
+@mixin spline-icon-box($icon, $icon-size: 1em, $icon-padding: 0.5em, $horizontal-position: left, $vertical-position: middle) {
+  @if unit($icon-size) != 'em' or unit($icon-padding) != 'em'{
+    @warn 'Size not supported with unit '+ unit($icon-size) + '. Only em is supported.';
+  }
+  
+  position: relative;
+  
+  margin-#{$horizontal-position}: $icon-size + $icon-padding;
+  
+  &:before {
+    @include spline-icon($icon, $icon-size: $icon-size, $icon-vertical-align: middle);
+    float: none;
+    position: absolute;
+    #{$horizontal-position}: 0;
+    margin-#{$horizontal-position}: -1em - $icon-padding / $icon-size;
+    
+    @if $vertical-position != middle {
+      #{$vertical-position}: 0;
+    }
+    @else {
+      top: 50%;
+      margin-top: -0.5em;
+    }
+  }
+}
+
+@mixin spline-button($color: #ddd, $contrast: 0.6, $font-size: 1em, $padding: 0.5em, $border-radius: 3px, $icon: false, $icon-size: false, $icon-vertical-align: false, $icon-float: false) {
+  @if $contrast < 0 {
+    @warn "$contrast can't be less than 0!";
+    $contrast: 0;
+  } 
+  @else if $contrast > 1 {
+    @warn "$contrast can't be greater than 1!";
+    $contrast: 1;
+  }
+  
+  @if $icon {
+    &:before {
+      @include spline-icon($icon: $icon, $icon-size: $icon-size, $icon-vertical-align: $icon-vertical-align, $icon-float: $icon-float);
+      padding-right: 0.5em;
+    }
+  }
+  
+  $font-color:0;
+  $font-shadow-color:0;
+  $font-shadow-y:0;
+  
+  @if lightness($color) > 50% {
+    $font-color: shade($color, 80%);
+    $font-shadow-color: tint($color, 90% * $contrast);
+    $font-shadow-y: 1px;
+  }
+  @else {
+    $font-color: tint($color, 80%);
+    $font-shadow-color: shade($color, 90% * $contrast);
+    $font-shadow-y: -1px;
+  }
+  
+  @include box-sizing(border-box);
+  @include border-radius($border-radius);
+  @include background-image(linear-gradient(tint($color, 20% * $contrast), shade($color, 20% * $contrast)));
+  @include text-shadow($font-shadow-color 0px $font-shadow-y 0);
+  @include box-shadow(tint($color, 90% * $contrast) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 1px 2px 0px);
+  
+  display: inline-block;
+  color: $font-color;
+  font-size: $font-size;
+  padding: $padding;
+  border: 1px solid shade($color, 40% * $contrast);
+  
+  &:hover {
+    @include background-image(linear-gradient(tint($color, 25% * $contrast), shade($color, 15% * $contrast)));
+    @include box-shadow(tint($color, 100% * $contrast) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 0px 10px);
+      
+    @if lightness($color) > 50% {
+      $font-color: shade($color, 100%);
+    }
+    @else {
+      $font-color: tint($color, 100%);
+    }
+    color: $font-color;
+    
+    border: 1px solid shade($color, 25% * $contrast);
+  }
+  
+  &:active {
+    @include background-image(linear-gradient(shade($color, 20% * $contrast), shade($color, 10% * $contrast)));
+    @include box-shadow(rgba(0, 0, 0, 0.2) 0 0.1em 0.3em 0 inset, rgba(0, 0, 0, 0.2) 0 0 3px);
+    
+    border: 1px solid shade($color, 40% * $contrast);
+    position: relative;
+    top: 1px;
+  }
+}

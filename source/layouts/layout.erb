@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <title><%= data.page.title || "Agevo" %></title>
+    
+    <%= stylesheet_link_tag "main" %>
+  </head>
+  
+  <body>
+  	<div class="top-wrapper">
+	  	<%= partial(:'partials/navigation/top_navigation') %>
+		<section class="header-section">
+			<header>
+				<div class="header-container">
+					<div class="logo">
+						<img src="res/img/agevo_logo.png" alt="Agevo Logo" />
+					</div>
+					<%= partial(:'partials/navigation/navigation', 
+											:locals => { 
+												:nav => data.navigation.main }) %>
+				</div>
+			</header>
+		</section>
+		
+		<% if content_for?(:header_visual) %>
+		<section class="key-visual-section">
+			<%= yield_content :header_visual %>
+		</section>
+		<% end %>
+		
+		<% if content_for?(:header_carousel) %>
+		<section class="carousel-section">
+			<%= yield_content :header_carousel %>
+		</section>
+		<% end %>
+		
+	    <section class="main-section">
+	    	<header>
+	    		<h1><%= data.page.title %></h1>
+	    	</header>
+			<div class="content" role="main">
+				<%= yield %>
+			</div>
+			<aside class="aside-b">
+				<h2><%= lorem.word.titlecase %></h2>
+				<p><%= lorem.paragraph %></p>
+				<img src="http://www.placehold.it/340x240" alt="Aside B Image" />
+			</aside>
+		</section>
+	</div>
+	
+	<footer class="footer-section">
+		<div class="footer-container">
+			<section class="box-a">
+				<h3><%= lorem.word.titlecase %></h3>
+				<p><%= lorem.paragraph %></p>
+			</section>
+			<section class="box-b">
+				<h4><%= lorem.word.titlecase %></h4>
+				<ul>
+					<li><%= lorem.word.titlecase %></li>
+					<li><%= lorem.word.titlecase %></li>
+					<li><%= lorem.word.titlecase %></li>
+				</ul>
+				<img src="http://www.placehold.it/200x140" alt="Box B Image" />
+			</section>
+			<section class="box-c">
+				<h3><%= lorem.word.titlecase %></h3>
+				<img src="http://www.placehold.it/200x140" alt="Box C Image 1" />
+				<h4><%= lorem.word.titlecase %></h4>
+				<img src="http://www.placehold.it/200x140" alt="Box C Image 1" />
+			</section>
+			<section class="box-d">
+				<h3><%= lorem.word.titlecase %></h3>
+				<p><%= lorem.sentence %></p>
+			</section>
+		</div>
+	</footer>
+    <%= javascript_include_tag  "boot" %>
+  </body>
+</html>

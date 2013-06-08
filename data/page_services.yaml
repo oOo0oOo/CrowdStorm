@@ -1,0 +1,11 @@
+key-visual:
+  alt: Services Key Visual
+  title: We put it to its best
+  src: http://placehold.it/1024x200
+  sizes:
+    - media: default
+      src: http://placehold.it/500x200
+    - media: small
+      src: http://placehold.it/1024x200
+    - media: large
+      src: http://placehold.it/1400x250
