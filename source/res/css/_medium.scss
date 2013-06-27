@@ -21,9 +21,12 @@
       & > aside.aside-a {
         @include grid-column($columns: 3);
         @include border-radius(1em);
+        margin-bottom: 3em;
       }
       
       & > .content {
+        margin-bottom: 3em;
+        
         &.small {
           @include grid-column($columns: 9);
         }
@@ -32,6 +35,7 @@
       & > aside.aside-b {
         @include grid-column($columns: 3);
         @include border-radius(1em);
+        margin-bottom: 3em;
       }
     }
   }

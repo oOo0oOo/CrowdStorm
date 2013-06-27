@@ -45,10 +45,10 @@
 		
 	    <section class="main-section">
 	    	<header>
-	    		<h1><%= data.page.title %></h1>
 	    		<% if content_for?(:header_content) %>
 	    		<div class="header-content"><%= yield_content :header_content %></div>
 	    		<% end %>
+	    		<h1><%= data.page.title %></h1>
 	    	</header>
 	    	
 			<% if content_for?(:side_a) %>

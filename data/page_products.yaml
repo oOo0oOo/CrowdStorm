@@ -11,21 +11,21 @@ key_visual:
       src: res/img/header_products_xl.jpg
 sub_pages:
   health:
-    product_info:
-      title: Rund um die Gesundheit
-      interchange_image:
-        alt: Gesunde Familie
-        title: Rund um die Gesundheit
-        src: res/img/content_health_family_s.jpg
-        sizes:
-          - media: default
-            src: res/img/content_health_family_s.jpg
-          - media: small
-            src: res/img/content_health_family_m.jpg
-      content: >
-          <p>Wir helfen Ihnen, Ihren Versicherungsschutz prämientechnisch, wie auch leistungsbezogen zu optimieren. Das bedeutet für Sie besseren Versicherungsschutz zu tieferen Krankenkassenprämien.</p>
-          <p>Auf Ihre Bedürfnisse abgestimmt stellen wir Ihnen gerne einen transparenten Leistungs- und Prämienvergleich als Entscheidungsgrundlage zusammen. So sparen Sie Zeit UND Prämien.</p>
-          <p>Mit der richtigen Versicherung sparen Sie viel Geld und können sich ganz auf die Genesung konzentrieren.</p>
+    product_infos:
+      - title: Rund um die Gesundheit
+        interchange_image:
+          alt: Gesunde Familie
+          title: Rund um die Gesundheit
+          src: res/img/content_health_family_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_health_family_s.jpg
+            - media: small
+              src: res/img/content_health_family_m.jpg
+        content: >
+            <p>Wir helfen Ihnen, Ihren Versicherungsschutz prämientechnisch, wie auch leistungsbezogen zu optimieren. Das bedeutet für Sie besseren Versicherungsschutz zu tieferen Krankenkassenprämien.</p>
+            <p>Auf Ihre Bedürfnisse abgestimmt stellen wir Ihnen gerne einen transparenten Leistungs- und Prämienvergleich als Entscheidungsgrundlage zusammen. So sparen Sie Zeit UND Prämien.</p>
+            <p>Mit der richtigen Versicherung sparen Sie viel Geld und können sich ganz auf die Genesung konzentrieren.</p>
     side_b: >
           <h4>Ihre Vorteile bei einem KrankenkassenCheck sind, dass Sie:</h4>
           <ul>
@@ -36,33 +36,142 @@ sub_pages:
             <li>sich nicht mit dem administrativen Kram einer Vertragsänderung herumschlagen müssen</li>
           </ul>
   travel:
-    product_info:
-      title: Reiselustig? Wir bieten die nötige Absicherung.
-      interchange_image:
-        alt: Gesunde Familie
-        title: Reiselustig? Wir bieten die nötige Absicherung.
-        src: res/img/content_travel_airplane_s.jpg
-        sizes:
-          - media: default
-            src: res/img/content_travel_airplane_s.jpg
-          - media: small
-            src: res/img/content_travel_airplane_m.jpg
-      content: >
-          <p>Sorglosgarantie vor, während und kurz nachdem Sie in den Ferien ihre schönen Tage verbringen</p>
-          <p>Der Abschluss einer Reiseversicherung gehört zur Reisevorbereitung, denn für wenig Geld kann man sich gegen die finanziellen Folgen von Krankheiten, Unfällen und Naturkatastrophen absichern. </p>
-          <p>Sie beinhaltet den Annullierungsschutz und die Personen-Assistance. Sie deckt die Kosten einer frühzeitigen Rückreise, einer Bergung oder Rettung aufgrund von während der Reise eintretenden Risiken. Auch eine nur vorübergehende Heimkehr oder zusätzlich verursachte Hotelaufenthalte sind gedeckt.</p>
+    product_infos:
+      - title: Reiselustig? Wir bieten die nötige Absicherung.
+        interchange_image:
+          alt: Gesunde Familie
+          title: Reiselustig? Wir bieten die nötige Absicherung.
+          src: res/img/content_travel_airplane_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_travel_airplane_s.jpg
+            - media: small
+              src: res/img/content_travel_airplane_m.jpg
+        content: >
+            <p>Sorglosgarantie vor, während und kurz nachdem Sie in den Ferien ihre schönen Tage verbringen</p>
+            <p>Der Abschluss einer Reiseversicherung gehört zur Reisevorbereitung, denn für wenig Geld kann man sich gegen die finanziellen Folgen von Krankheiten, Unfällen und Naturkatastrophen absichern. </p>
+            <p>Sie beinhaltet den Annullierungsschutz und die Personen-Assistance. Sie deckt die Kosten einer frühzeitigen Rückreise, einer Bergung oder Rettung aufgrund von während der Reise eintretenden Risiken. Auch eine nur vorübergehende Heimkehr oder zusätzlich verursachte Hotelaufenthalte sind gedeckt.</p>
   liability:
-    product_info:
-      title: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
-      interchange_image:
-        alt: Gesunde Familie
-        title: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
-        src: res/img/content_liability_s.jpg
-        sizes:
-          - media: default
-            src: res/img/content_liability_s.jpg
-          - media: small
-            src: res/img/content_liability_m.jpg
-      content: >
-          <p>Die Privathaftpflichtversicherung kommt für den finanziellen Schaden auf, welchen Sie versehentlich Dritten zufügen. Unberechtigte Ansprüche, welche Dritte an Sie stellen, wehrt sie dagegen ab.</p>
-          <p>Die Haftpflichtversicherung umfasst ausschliesslich den Schaden, der bei Dritten entsteht. Versichert werden Personen- und Sachschäden bis CHF 3 Millionen, auf Wunsch bis CHF 5 oder 10 Millionen.</p>
+    product_infos:
+      - title: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
+        interchange_image:
+          alt: Gesunde Familie
+          title: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
+          src: res/img/content_liability_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_liability_s.jpg
+            - media: small
+              src: res/img/content_liability_m.jpg
+        content: >
+            <p>Die Privathaftpflichtversicherung kommt für den finanziellen Schaden auf, welchen Sie versehentlich Dritten zufügen. Unberechtigte Ansprüche, welche Dritte an Sie stellen, wehrt sie dagegen ab.</p>
+            <p>Die Haftpflichtversicherung umfasst ausschliesslich den Schaden, der bei Dritten entsteht. Versichert werden Personen- und Sachschäden bis CHF 3 Millionen, auf Wunsch bis CHF 5 oder 10 Millionen.</p>
+  contents:
+    product_infos:
+      - title: "Schützten Sie ihre beweglichen Sachen zu Hause und auswärts"
+        interchange_image:
+          alt: Strand mit Zeichnung von Haus im Sand
+          title: "Schützten Sie ihre beweglichen Sachen zu Hause und auswärts"
+          src: res/img/content_contents_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_contents_s.jpg
+            - media: small
+              src: res/img/content_contents_m.jpg
+        content: >
+            <p>Die Hausratversicherung deckt Schäden, welche durch Feuer, Wasser, Diebstahl oder Glasbruch entstehen. Sie übernimmt die Schäden, welche an Haushaltgegenständen, Mobiliar, Kleidung, Sportgeräten etc. entstehen, nicht aber Gebäudeschäden.</p>
+            <p>Der einfache Diebstahl zu Hause ist in der Grunddeckung versichert. Allerdings gelten gewisse Deckungseinschränkungen. So sind beispielsweise nicht gesichertes Bargeld und andere Geldwerte nicht versichert. Der einfache Diebstahl auswärts (ausserhalb des Hauses) hingegen muss oft als Versicherungszusatz separat abgeschlossen werden.</p>
+            <p>Während der Schaden beim einfachen Diebstahl zuhause im Rahmen der Versicherungssumme gedeckt ist, sind beim einfachen Diebstahl auswärts wählbare Summen von in der Regel CHF 2'000 bis CHF 5'000 versichert.</p>
+  car:
+    product_infos:
+      - title: "Die richtige Wahl der Zusatz-Versicherungen schützt Sie und Ihr Auto vor grossem Wertzerfall"
+        interchange_image:
+          alt: Schnelles Auto
+          title: "Die richtige Wahl der Zusatz-Versicherungen schützt Sie und Ihr Auto vor grossem Wertzerfall"
+          src: res/img/content_car_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_car_s.jpg
+            - media: small
+              src: res/img/content_car_m.jpg
+        content: >
+            <p>Der Abschluss einer Kollisionskaskoversicherung ist freiwillig (im Gegensatz zur obligatorischen Haftpflichtversicherung). Die Kollisionskaskoversicherung deckt selbst verursachte Schäden am eigenen Fahrzeug.</p>
+            <p>Gewisse Versicherungen bezeichnen die Kombination von Teilkasko und Kollisionskasko als Vollkasko. Die Vollkasko-Versicherung lohnt sich nur für neuere Autos bis zu einem Fahrzeugalter von ca. 4 bis 5 Jahren.</p>
+      - title: Unfallversicherung der Benützer
+        content: "<p>Die Unfallversicherung leistet Entschädigungen bei Todesfall, Invalidität, vorübergehender Arbeitsunfähigkeit und zahlt Spitalgeld während eines Spitalaufenthaltes sowie Heilungskosten.</p>"
+      - title: Zusatzversicherungen
+        content: "<p>Folgende Zusatzversicherungen können in Ergänzung zur Haftpflicht- und/oder Kaskoversicherung abgeschlossen werden: Bonusschutz, Grobfahrlässigkeitsschutz, Marderschaden, Reiseeffekten, Pannenhilfe und Verkehrsrechtsschutz.</p>"
+    side_b: >
+              <h4>Haftpflichtversicherung</h4>
+              <p>Die obligatorische Haftpflichtversicherung gewährt den versicherten Personen Versicherungsschutz für Sach- und Personenschäden gegenüber Dritten, die mit dem versicherten Auto verursacht werden.</p>
+              <h4>Kaskoversicherung</h4>
+              <p>Mit einer Kaskoversicherung können Sie Ihr Auto gegen Kollision, Diebstahl, Feuer, Elementar, Glasbruch, Kollision mit Tieren, Park- und Vandalismusschäden versichern.</p>
+  bike:
+    product_infos:
+      - title: "Schützen Sie sich und Ihr Motorrad bei Unfall oder Diebstahl"
+        interchange_image:
+          alt: Motorrad
+          title: "Schützen Sie sich und Ihr Motorrad bei Unfall oder Diebstahl"
+          src: res/img/content_bike_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_bike_s.jpg
+            - media: small
+              src: res/img/content_bike_m.jpg
+        content: >
+            <p>Ob mit dem Motorrad oder Scooter – schnell ist etwas passiert. Ein Blechschaden, ein Diebstahl oder gar Verletzte? Mit einer Motorradversicherung sichern Sie sich für den Fall der Fälle ab – individuell nach Ihren Bedürfnissen.</p>
+            <p>Wir stellen Ihnen aus den verschiedenen Modulen/Bereichen das für Sie richtige zusammen.</p>
+      - title: Unfallversicherung der Benützer
+        content: "<p>Die Unfallversicherung leistet Entschädigungen bei Todesfall, Invalidität, vorübergehender Arbeitsunfähigkeit und zahlt Spitalgeld während eines Spitalaufenthaltes sowie Heilungskosten.</p>"
+      - title: Zusatzversicherungen
+        content: "<p>Folgende Zusatzversicherungen können in Ergänzung zur Haftpflicht- und/oder Kaskoversicherung abgeschlossen werden: Bonusschutz, Grobfahrlässigkeitsschutz, Marderschaden, Reiseeffekten, Pannenhilfe und Verkehrsrechtsschutz.</p>"
+    side_b: >
+              <h4>Haftpflichtversicherung</h4>
+              <p>Die obligatorische Haftpflichtversicherung gewährt den versicherten Personen Versicherungsschutz für Sach- und Personenschäden gegenüber Dritten, die mit dem versicherten Töff verursacht werden.</p>
+              <h4>Kaskoversicherung</h4>
+              <p>Mit einer Kaskoversicherung können Sie Ihr Motorrad gegen Kollision, Diebstahl, Feuer, Elementar, Glasbruch, Kollision mit Tieren, Park- und Vandalismusschäden versichern.</p>
+  legal:
+    product_infos:
+      - title: "Rechtsberatung, Vertretung vor Gericht und Übernahme teurer Anwaltskosten im Paket"
+        interchange_image:
+          alt: Justitia
+          title: "Rechtsberatung, Vertretung vor Gericht und Übernahme teurer Anwaltskosten im Paket"
+          src: res/img/content_legal_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_legal_s.jpg
+            - media: small
+              src: res/img/content_legal_m.jpg
+        content: >
+            <p>Eine Rechtsschutzversicherung (Privat- und Verkehrs-Rechtsschutz) unterstützt Sie, wenn Sie z. B. einen Rechtsanwalt brauchen oder vor Gericht erscheinen müssen.</p>
+            <p>Sie übernimmt die Kosten für Anwalt, Expertisen und Gericht sowie der Gegenpartei zugesprochene Entschädigungen bis CHF 500'000.– pro Schadenfall.</p>
+            <p>Sie können die Privat-Rechtsschutzversicherung einzeln oder in Kombination mit der Verkehrs-Rechtsschutz-Versicherung abschliessen.</p>
+  valuables:
+    product_infos:
+      - title: "Lösungen für den ungenügenden Schutz bei Invalidität oder Todesfall für Sie und Ihre Familie"
+        interchange_image:
+          alt: Wertsachen
+          title: "Lösungen für den ungenügenden Schutz bei Invalidität oder Todesfall für Sie und Ihre Familie"
+          src: res/img/content_valuables_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_valuables_s.jpg
+            - media: small
+              src: res/img/content_valuables_m.jpg
+        content: >
+            <p>Lebensversicherungen lassen sich grob in Kapital- und Risikoversicherungen unterteilen. Bei Kapitalversicherungen wird mit Spareinlagen Vermögen gebildet, Risikoversicherungen versichern hingegen ein bestimmtes Risiko.</p>
+            <p>Die Todesfallversicherung deckt das finanzielle Risiko des Todesfalls. Stirbt eine versicherte Person während der Laufzeit, erhalten die Begünstigten die versicherte Geldleistung.</p>
+            <p>Bei den Todesfallversicherungen gibt es zwei Varianten der Versicherungsleistung. Todesfallversicherungen mit konstanter Versicherungssumme sowie Todesfallversicherungen bei denen die Versicherungssumme jedes Jahr um einen gewissen Betrag abnimmt.</p>
+    side_b: >
+              <h4>Risikoversicherung</h4>
+              <ul>
+                <li>Todesfall</li>
+                <li>Erwerbsunfähigkeit</li>
+                <li>Krankentaggeld</li>
+              </ul>
+              <h4>Vorsorge & Sparen</h4>
+              <ul>
+                <li>Vorsorge</li>
+                <li>Sparpläne</li>
+                <li>Lebensversicherungen</li>
+              </ul>

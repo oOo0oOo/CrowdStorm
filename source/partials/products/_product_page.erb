@@ -21,7 +21,9 @@
 <% end %>
 
 <div class="products">
-	<%= partial(:'partials/products/product_info', 
-							:locals => { 
-								:product_info => product_page.product_info}) %>
+	<% product_page.product_infos.each do |product_info| %>
+		<%= partial(:'partials/products/product_info', 
+								:locals => { 
+									:product_info => product_info}) %>
+	<% end %>
 </div>

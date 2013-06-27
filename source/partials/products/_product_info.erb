@@ -9,7 +9,7 @@
 		</div>
 	<% end %>
 	
-	<div class="product-content">
+	<div class="product-content<%= product_info.interchange_image.nil? ? ' full-width' : ''  %>">
 		<%= product_info.content %>
 	</div>
 </section>

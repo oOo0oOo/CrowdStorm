@@ -170,7 +170,6 @@ img.image-box {
   
   .main-section {
     @include grid-row();
-    padding-bottom: 3em;
     
     > header {
       @include grid-column($columns: 12);
@@ -288,3 +287,4 @@ img.image-box {
 
 // inlcude webfont at latest point possible
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600");
+@import url("http://fonts.googleapis.com/css?family=Lato");
