@@ -1,11 +1,68 @@
-key-visual:
-  alt: Services Key Visual
-  title: We put it to its best
-  src: http://placehold.it/1024x200
+key_visual:
+  alt: Produkte
+  title: Unsere Produkte
+  src: res/img/header_products_m.jpg
   sizes:
     - media: default
-      src: http://placehold.it/500x200
+      src: res/img/header_products_s.jpg
     - media: small
-      src: http://placehold.it/1024x200
+      src: res/img/header_products_m.jpg
     - media: large
-      src: http://placehold.it/1400x250
+      src: res/img/header_products_xl.jpg
+sub_pages:
+  health:
+    product_info:
+      title: Rund um die Gesundheit
+      interchange_image:
+        alt: Gesunde Familie
+        title: Rund um die Gesundheit
+        src: res/img/content_health_family_s.jpg
+        sizes:
+          - media: default
+            src: res/img/content_health_family_s.jpg
+          - media: small
+            src: res/img/content_health_family_m.jpg
+      content: >
+          <p>Wir helfen Ihnen, Ihren Versicherungsschutz prämientechnisch, wie auch leistungsbezogen zu optimieren. Das bedeutet für Sie besseren Versicherungsschutz zu tieferen Krankenkassenprämien.</p>
+          <p>Auf Ihre Bedürfnisse abgestimmt stellen wir Ihnen gerne einen transparenten Leistungs- und Prämienvergleich als Entscheidungsgrundlage zusammen. So sparen Sie Zeit UND Prämien.</p>
+          <p>Mit der richtigen Versicherung sparen Sie viel Geld und können sich ganz auf die Genesung konzentrieren.</p>
+    side_b: >
+          <h4>Ihre Vorteile bei einem KrankenkassenCheck sind, dass Sie:</h4>
+          <ul>
+            <li>nicht zuviel Krankenkassen-Prämien zahlen</li>
+            <li>sicher sind, dass keine Doppelversicherungen (Unfallversicherung etc.) bestehen</li>
+            <li>wissen, ob sie eventuell von vorhandenen Kollektiv-Lösungen profitieren können</li>
+            <li>den Weg zur Kostenreduktion kennen</li>
+            <li>sich nicht mit dem administrativen Kram einer Vertragsänderung herumschlagen müssen</li>
+          </ul>
+  travel:
+    product_info:
+      title: Reiselustig? Wir bieten die nötige Absicherung.
+      interchange_image:
+        alt: Gesunde Familie
+        title: Reiselustig? Wir bieten die nötige Absicherung.
+        src: res/img/content_travel_airplane_s.jpg
+        sizes:
+          - media: default
+            src: res/img/content_travel_airplane_s.jpg
+          - media: small
+            src: res/img/content_travel_airplane_m.jpg
+      content: >
+          <p>Sorglosgarantie vor, während und kurz nachdem Sie in den Ferien ihre schönen Tage verbringen</p>
+          <p>Der Abschluss einer Reiseversicherung gehört zur Reisevorbereitung, denn für wenig Geld kann man sich gegen die finanziellen Folgen von Krankheiten, Unfällen und Naturkatastrophen absichern. </p>
+          <p>Sie beinhaltet den Annullierungsschutz und die Personen-Assistance. Sie deckt die Kosten einer frühzeitigen Rückreise, einer Bergung oder Rettung aufgrund von während der Reise eintretenden Risiken. Auch eine nur vorübergehende Heimkehr oder zusätzlich verursachte Hotelaufenthalte sind gedeckt.</p>
+  liability:
+    product_info:
+      title: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
+      interchange_image:
+        alt: Gesunde Familie
+        title: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
+        src: res/img/content_liability_s.jpg
+        sizes:
+          - media: default
+            src: res/img/content_liability_s.jpg
+          - media: small
+            src: res/img/content_liability_m.jpg
+      content: >
+          <p>Die Privathaftpflichtversicherung kommt für den finanziellen Schaden auf, welchen Sie versehentlich Dritten zufügen. Unberechtigte Ansprüche, welche Dritte an Sie stellen, wehrt sie dagegen ab.</p>
+          <p>Die Haftpflichtversicherung umfasst ausschliesslich den Schaden, der bei Dritten entsteht. Versichert werden Personen- und Sachschäden bis CHF 3 Millionen, auf Wunsch bis CHF 5 oder 10 Millionen.</p>

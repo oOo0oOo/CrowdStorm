@@ -1,11 +1,21 @@
-main:
-  cssclass: main-navigation
-  links:
-  - text: Lorem ipsum
-    url: "#"
-  - text: Dolor sit
-    url: "#"
-  - text: Eirmod tempor
-    url: "#"
-  - text: Gubergren
-    url: "#"
+leading: "Unsere Produkte:"
+links:
+  - text: Übersicht
+    url: "produkte.html"
+  - text: Krankenkasse
+    url: "krankenkasse.html"
+  - text: Reise
+    url: "reise.html"
+  - text: Haftpflicht
+    url: "haftpflicht.html"
+  - text: Hausrat
+    url: "hausrat.html"
+  - text: Auto
+    url: "auto.html"
+  - text: Motorrad
+    url: "motorrad.html"
+  - text: Rechtsschutz
+    url: "rechtsschutz.html"
+  - text: Wertsachen
+    url: "wertsachen.html"
+
