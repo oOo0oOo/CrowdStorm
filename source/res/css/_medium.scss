@@ -1,30 +1,58 @@
 // Medium layout 
 @media #{$medium} {
   .top-wrapper {
+
     .header-section {
-      & > header {
-        & > .header-container {
-          & > .logo {
-            @include grid-column($columns: 4);
+      > header {
+        > .header-container {
+          position: relative;
+          margin-bottom: 1em;
+          
+          > .logo {
+            @include grid-column($columns: 12);
             text-align: left;
           }
           
-          & > nav {
-            @include grid-column($columns: 8);
+          > nav {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
             text-align: right;
+            
+            > ul.main-navigation {
+              margin-left: 0;
+              display: inline-block;
+              @include horizontal-list();
+      
+              > li {
+                //display: table-cell;
+                vertical-align: bottom;
+                padding-right: 2em;
+                
+                &:last-child {
+                  padding: 0;
+                }
+                
+                > a {
+                  font-family: $agevo-font-headings;
+                  font-size: emCalc(20px);
+                }
+              }
+            }
           }
         }
       }
     }
     
     .main-section {
-      & > aside.aside-a {
+      > aside.aside-a {
         @include grid-column($columns: 3);
         @include border-radius(1em);
         margin-bottom: 3em;
       }
       
-      & > .content {
+      > .content {
         margin-bottom: 3em;
         
         &.small {
@@ -32,7 +60,7 @@
         }
       }
       
-      & > aside.aside-b {
+      > aside.aside-b {
         @include grid-column($columns: 3);
         @include border-radius(1em);
         margin-bottom: 3em;
@@ -40,21 +68,27 @@
     }
   }
   
+  .products {
+    > .product-teaser-blocks {
+      @include block-grid(4);
+    }
+  }
+  
   .footer-section {
-    & > .footer-container {
-      & > .box-a {
+    > .footer-container {
+      > .box-a {
         @include grid-column($columns: 3);
       }
       
-      & > .box-b {
+      > .box-b {
         @include grid-column($columns: 3);
       }
       
-      & > .box-c {
+      > .box-c {
         @include grid-column($columns: 3);
       }
       
-      & > .box-d {
+      > .box-d {
         @include grid-column($columns: 3);
       }
     }

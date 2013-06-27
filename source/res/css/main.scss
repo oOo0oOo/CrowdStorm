@@ -7,6 +7,7 @@
 @import "foundation/components/global";
 @import "foundation/components/visibility";
 @import "foundation/components/grid";
+@import "foundation/components/block-grid";
 @import "foundation/components/top-bar";
 @import "foundation/components/sub-nav";
 @import "foundation/components/orbit";
@@ -44,7 +45,7 @@
   color: $agevo-dark-grey;
 }
 
-img.image-box {
+.image-box {
   padding: 0.5em;
   @include border-radius(0.5em);
   border: solid 1px $agevo-grey;
@@ -117,8 +118,23 @@ img.image-box {
   > .top-bar {
     @include box-shadow(rgba(0, 0, 0, 0.4) 0px 0px 5px);
     //@include box-sizing(content-box);
-    //text-shadow: 0 -1px 0 shade($topbar-bg, 80%);
-    border-bottom: 1px solid shade($topbar-bg, 20%);
+    text-shadow: 0 1px 0 white;
+    
+    
+    
+   > .top-bar-section {
+      > ul {
+        > li {
+          > a {
+            font-weight: normal;
+            
+            &:hover {
+              color: $agevo-black;
+            }
+          }
+        }
+      }
+    }
   }
   
   > .header-section {
@@ -140,29 +156,7 @@ img.image-box {
     		}
         
         > nav {
-          @include grid-column($columns: 12);
-          text-align: center;
-          
-          > ul.main-navigation {
-            margin-left: 0;
-            display: inline-block;
-            height: 4em;
-            @include horizontal-list();
-    
-            > li {
-              //display: table-cell;
-              vertical-align: bottom;
-              padding-right: 1em;
-              
-              &:last-child {
-                padding: 0;
-              }
-              
-              > a {
-                font-size: emCalc(14px);
-              }
-            }
-          }
+          display: none;
         }
       }
   	}
@@ -223,6 +217,53 @@ img.image-box {
       @include grid-column($columns: 12);
     }
   }
+  
+  > .product-teaser-blocks {
+    @include block-grid(1);
+    
+    > li {
+      > a {
+        color: $agevo-black;
+        
+        .product-teaser {
+          @extend .image-box;
+          min-height: 260px;
+          
+          > h4 {
+            margin-top: 0.2em;
+            font-size: 1.5em;
+          }
+          
+          > p {
+            margin-bottom: 0.8em;
+          }
+          
+          > figure {
+            width: 100%;
+            > img {
+              width: 100%;
+              @include transition(opacity 0.3s ease-out);
+            }
+          }
+          
+          > .read-more {
+            width: 100%;
+            text-align: center;
+          }
+        }
+        
+        &:hover {
+          .product-teaser { 
+            > figure {
+              > img {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -233,7 +274,7 @@ img.image-box {
   width: 100%;
   color: tint($agevo-footer-color, 60%);
   padding-bottom: 1em;
-  //@include text-shadow(0 1px 0 shade($agevo-footer-color, 50%));
+  @include text-shadow(0 -1px 0 shade($agevo-footer-color, 40%));
   
   a {
     color: tint($agevo-footer-color, 60%);
@@ -244,13 +285,15 @@ img.image-box {
   }
   
   #{headings()} {
-    color: tint($agevo-footer-color, 40%);
+    color: tint($agevo-footer-color, 60%);
   }
   
   > .footer-container {
     @include grid-row();
     
     > .box-a {
+      margin-top: 1.5em;
+      
       @include grid-column($columns: 12);
       
       > .footer-nav {
@@ -269,14 +312,20 @@ img.image-box {
     }
     
     > .box-b {
+      margin-top: 1.5em;
+      
       @include grid-column($columns: 12);
     }
     
     > .box-c {
+      margin-top: 1.5em;
+      
       @include grid-column($columns: 12);
     }
     
     > .box-d {
+      margin-top: 1.5em;
+      
       @include grid-column($columns: 12);
     }
   }

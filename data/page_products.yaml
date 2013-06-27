@@ -9,6 +9,43 @@ key_visual:
       src: res/img/header_products_m.jpg
     - media: large
       src: res/img/header_products_xl.jpg
+product_teasers:
+  - title: Krankenkasse
+    lead: Rund um die Gesundheit
+    link: krankenkasse.html
+    image: res/img/content_health_family_s.jpg
+  - title: Leben
+    lead: Lösungen für den ungenügenden Schutz bei Invalidität oder Todesfall für Sie und Ihre Familie
+    link: leben.html
+    image: res/img/content_health_family_s.jpg
+  - title: Reise
+    lead: Reiselustig? Wir bieten die nötige Absicherung.
+    link: reise.html
+    image: res/img/content_travel_airplane_s.jpg
+  - title: Haftpflicht
+    lead: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
+    link: haftpflicht.html
+    image: res/img/content_liability_s.jpg
+  - title: Hausrat
+    lead: Schützten Sie ihre beweglichen Sachen zu Hause und auswärts
+    link: hausrat.html
+    image: res/img/content_contents_s.jpg
+  - title: Auto
+    lead: Die richtige Wahl der Zusatz-Versicherungen schützt Sie und Ihr Auto vor grossem Wertzerfall
+    link: auto.html
+    image: res/img/content_car_s.jpg
+  - title: Motorrad
+    lead: Schützen Sie sich und Ihr Motorrad bei Unfall oder Diebstahl
+    link: motorrad.html
+    image: res/img/content_bike_s.jpg
+  - title: Rechtsschutz
+    lead: Rechtsberatung, Vertretung vor Gericht und Übernahme teurer Anwaltskosten im Paket
+    link: rechtsschutz.html
+    image: res/img/content_legal_s.jpg
+  - title: Wertsachen
+    lead: Sicherheit für wertvolle Sachen
+    link: wertsachen.html
+    image: res/img/content_valuables_s.jpg
 sub_pages:
   health:
     product_infos:
@@ -146,18 +183,18 @@ sub_pages:
             <p>Eine Rechtsschutzversicherung (Privat- und Verkehrs-Rechtsschutz) unterstützt Sie, wenn Sie z. B. einen Rechtsanwalt brauchen oder vor Gericht erscheinen müssen.</p>
             <p>Sie übernimmt die Kosten für Anwalt, Expertisen und Gericht sowie der Gegenpartei zugesprochene Entschädigungen bis CHF 500'000.– pro Schadenfall.</p>
             <p>Sie können die Privat-Rechtsschutzversicherung einzeln oder in Kombination mit der Verkehrs-Rechtsschutz-Versicherung abschliessen.</p>
-  valuables:
+  life:
     product_infos:
       - title: "Lösungen für den ungenügenden Schutz bei Invalidität oder Todesfall für Sie und Ihre Familie"
         interchange_image:
-          alt: Wertsachen
+          alt: Familie
           title: "Lösungen für den ungenügenden Schutz bei Invalidität oder Todesfall für Sie und Ihre Familie"
-          src: res/img/content_valuables_s.jpg
+          src: res/img/content_health_family_s.jpg
           sizes:
             - media: default
-              src: res/img/content_valuables_s.jpg
+              src: res/img/content_health_family_s.jpg
             - media: small
-              src: res/img/content_valuables_m.jpg
+              src: res/img/content_health_family_m.jpg
         content: >
             <p>Lebensversicherungen lassen sich grob in Kapital- und Risikoversicherungen unterteilen. Bei Kapitalversicherungen wird mit Spareinlagen Vermögen gebildet, Risikoversicherungen versichern hingegen ein bestimmtes Risiko.</p>
             <p>Die Todesfallversicherung deckt das finanzielle Risiko des Todesfalls. Stirbt eine versicherte Person während der Laufzeit, erhalten die Begünstigten die versicherte Geldleistung.</p>
@@ -174,4 +211,30 @@ sub_pages:
                 <li>Vorsorge</li>
                 <li>Sparpläne</li>
                 <li>Lebensversicherungen</li>
+              </ul>
+  valuables:
+    product_infos:
+      - title: "Sicherheit für wertvolle Sachen"
+        interchange_image:
+          alt: Wertsachen
+          title: "Sicherheit für wertvolle Sachen"
+          src: res/img/content_valuables_s.jpg
+          sizes:
+            - media: default
+              src: res/img/content_valuables_s.jpg
+            - media: small
+              src: res/img/content_valuables_m.jpg
+        content: >
+            <p>Die Wertsachen-Versicherung bietet zusätzliche Sicherheit für die besonders wertvollen Dinge in Ihrem Haushalt.</p>
+            <p>Sie ist die ideale Ergänzung zu Ihrer Hausrat-Versicherung. Wir übernehmen Ihren Schaden sowohl bei Diebstahl, Zerstörung oder Verlust.</p>
+            <p>In der Hausrat-Versicherung können Sie kleinere Schmuckstücke versichern</p>
+    side_b: >
+              <h4>Versichern Sie folgendes mit einer Wertsachen-Versicherung</h4>
+              <ul>
+                <li>Uhren, Schmuck, Pelze</li>
+                <li>Bilder, Kunstgegenstände, Skulpturen</li>
+                <li>Sammlerobjekte</li>
+                <li>Foto-, Video-, Hi-Fi- Geräte</li>
+                <li>Musikinstrumente</li>
+                <li>Technische Apparate, Computer, Notebooks, Hörgeräte</li>
               </ul>

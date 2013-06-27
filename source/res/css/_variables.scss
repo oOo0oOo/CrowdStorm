@@ -1,4 +1,5 @@
 $agevo-black: #1e2528;
+$agevo-lighter-grey: tint($agevo-black, 98%);
 $agevo-light-grey: tint($agevo-black, 90%);
 $agevo-grey: tint($agevo-black, 80%);
 $agevo-dark-grey: tint($agevo-black, 40%);
@@ -8,6 +9,9 @@ $agevo-link-color: $agevo-primary-color;
 $agevo-link-hover-color: tint($agevo-primary-color, 40%);
 $agevo-link-active-color: $agevo-link-hover-color;
 $agevo-footer-color: $agevo-dark-grey;
+
+$agevo-font-regular: "Open Sans", sans-serif;
+$agevo-font-headings: "Lato", sans-serif;
 
 //
 // Foundation Variables
@@ -41,7 +45,7 @@ $default-float: left;
 
 // $body-bg: #fff;
 $body-font-color: $agevo-black;
-$body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: $agevo-font-regular;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -1213,7 +1217,7 @@ $sub-nav-active-bg: $agevo-primary-color;
 
 // Background color for the top bar
 
-$topbar-bg: $agevo-dark-grey !default;
+$topbar-bg: $agevo-light-grey !default;
 
 // Height and margin
 
@@ -1227,20 +1231,20 @@ $topbar-margin-bottom:                 emCalc(30px);
 // Controlling the styles for the title in the top bar
 
 // $topbar-title-weight:                  bold;
-//$topbar-title-font-size:               emCalc(22px);
+$topbar-title-font-size:               emCalc(20px);
 
 // Style the top bar dropdown elements
 
-$topbar-dropdown-bg:                   $topbar-bg;
+$topbar-dropdown-bg:                   tint($topbar-bg, 50%);
 $topbar-dropdown-link-color:           $topbar-bg;
 //$topbar-dropdown-link-bg:              lighten($topbar-bg, 5%);
-// $topbar-dropdown-toggle-size:          5px;
+$topbar-dropdown-toggle-size:          5px;
 //$topbar-dropdown-toggle-color:         $topbar-bg, 80%);
 //$topbar-dropdown-toggle-alpha:         1;
 
 // Set the link colors and styles for top-level nav
 
-$topbar-link-color:                    tint($topbar-bg, 80%);
+$topbar-link-color:                    shade($topbar-bg, 60%);
 $topbar-link-color-hover:              tint($topbar-bg, 80%);
 $topbar-link-color-active:             tint($topbar-bg, 80%);
 // $topbar-link-weight:                   bold;
@@ -1259,10 +1263,10 @@ $topbar-link-bg-hover:                 shade($topbar-bg, 10%);
 // $topbar-menu-link-transform:           uppercase;
 // $topbar-menu-link-font-size:           emCalc(16px);
 // $topbar-menu-link-weight:              bold;
-$topbar-menu-link-color:               tint($topbar-bg, 80%);
-$topbar-menu-icon-color:               tint($topbar-bg, 80%);
-$topbar-menu-link-color-toggled:       white;
-$topbar-menu-icon-color-toggled:       white;
+$topbar-menu-link-color:               shade($topbar-bg, 60%);
+$topbar-menu-icon-color:               shade($topbar-bg, 60%);
+$topbar-menu-link-color-toggled:       shade($topbar-bg, 80%);
+$topbar-menu-icon-color-toggled:       shade($topbar-bg, 80%);
 
 // Transitions and breakpoint styles
 
