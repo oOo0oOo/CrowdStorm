@@ -2,18 +2,31 @@ carousel:
   options: "resume_on_mouseout:true"
   items:
     - image: 
-        alt: Carousel Image 1
-        title: Carousel Image
-        src: http://placehold.it/1024x400
-        sizes:
-          - media: default
-            src: http://placehold.it/500x200
-          - media: small
-            src: http://placehold.it/1024x400
-          - media: large
-            src: http://placehold.it/1400x500
-      title: Test title
-      sub-title: This is a test sub title and can be a lead in text that is maybe a bit longer than expected
+        alt: Sparen
+        title: Sparen Sie Geld durch optimierte Produkte
+        src: res/img/carousel_sparen.jpg
+      title: Sparen Sie Geld durch optimierte Produkte
+      sub-title: "Ein Check lohnt sich für jede Versicherung. Ihre bestehende Versicherung wird mit den Lösungen von unzähligen anderen Anbietern verglichen."
+      button:
+        icon: "&#xe0fc;"
+        text: Erfahren Sie mehr
+        href: "#"
+    - image: 
+        alt: Vertrauen
+        title: Wir schaffen Vertrauen
+        src: res/img/carousel_vertrauen.jpg
+      title: Wir schaffen Vertrauen
+      sub-title: "Wir empfehlen Ihnen immer die richtigen Produkte. Lernen Sie unsere Dienstleistungen kennen und vertrauen Sie unserer Beratung."
+      button:
+        icon: "&#xe0fc;"
+        text: Erfahren Sie mehr
+        href: "#"
+    - image: 
+        alt: Rechtsschutz
+        title: Wir schaffen Vertrauen
+        src: res/img/carousel_rechtsschutz.jpg
+      title: Rumdum geschützt mit Rechtsschutz
+      sub-title: "Wählen Sie zwischen den richtigen Produkten aus. Rechtsberatung, Vertretung vor Gericht und Übernahme teurer Anwaltskosten im Paket."
       button:
         icon: "&#xe0fc;"
         text: Erfahren Sie mehr

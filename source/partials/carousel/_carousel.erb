@@ -6,7 +6,7 @@
 				<%= partial(:'partials/image/interchange_image', :locals => { :interchange_image => item.image }) %>
 				<div class="orbit-caption">
 					<h2><%= item.title %></h2>
-					<h3 class="sub-title"><%= item['sub-title'] %></h3>
+					<p class="sub-title"><%= item['sub-title'] %></p>
 					<a href="<%= item.button.href %>" class="read-more" data-icon="<%= item.button.icon %>"><%= item.button.text %></a>
 				</div>
 			</li>

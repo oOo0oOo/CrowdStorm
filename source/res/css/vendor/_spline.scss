@@ -1,6 +1,6 @@
 $spline-icon-font: 'agevo-icons';
 
-@mixin spline-icon($icon, $icon-size: false, $icon-vertical-align: false, $icon-float: false) {
+@mixin spline-icon($icon, $icon-size: false, $icon-vertical-align: false, $icon-color: false, $icon-float: false) {
   font-family: $spline-icon-font;
   content: $icon;
   line-height: 1;
@@ -16,23 +16,27 @@ $spline-icon-font: 'agevo-icons';
   @if $icon-size {
     font-size: $icon-size;
   }
+
+  @if $icon-color {
+    color: $icon-color;
+  }
 }
 
-@mixin spline-icon-box($icon, $icon-size: 1em, $icon-padding: 0.5em, $horizontal-position: left, $vertical-position: middle) {
+@mixin spline-icon-box($icon, $icon-size: 1em, $icon-color: false, $icon-padding: 0.5em, $horizontal-position: left, $vertical-position: middle, $position: before) {
   @if unit($icon-size) != 'em' or unit($icon-padding) != 'em'{
     @warn 'Size not supported with unit '+ unit($icon-size) + '. Only em is supported.';
   }
   
   position: relative;
   
-  margin-#{$horizontal-position}: $icon-size + $icon-padding;
+  padding-#{$horizontal-position}: $icon-size + $icon-padding;
   
-  &:before {
-    @include spline-icon($icon, $icon-size: $icon-size, $icon-vertical-align: middle);
+  &:#{$position} {
+    @include spline-icon($icon, $icon-size: $icon-size, $icon-color: $icon-color, $icon-vertical-align: middle);
     float: none;
     position: absolute;
     #{$horizontal-position}: 0;
-    margin-#{$horizontal-position}: -1em - $icon-padding / $icon-size;
+    padding-#{$horizontal-position}: -1em - $icon-padding / $icon-size;
     
     @if $vertical-position != middle {
       #{$vertical-position}: 0;

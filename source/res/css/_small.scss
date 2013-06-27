@@ -5,18 +5,47 @@
       & > header {
         & > .header-container {
           & > .logo {
-            @include grid-column($columns: 3);
+            @include grid-column($columns: 4);
             text-align: left;
           }
     
           & > nav {
-            @include grid-column($columns: 9);
+            @include grid-column($columns: 8);
             text-align: right;
+            
+            & > ul.main-navigation {
+              //width: none;
+              
+              & > li {
+                & > a {
+                  font-size: emCalc(16px);
+                }
+              }
+            }
           }
         }
       }
     }
-  }  
+  }
+  
+  .products {
+    > .product-info {
+      @include grid-row($behavior: nest);
+      
+      > header {
+        @include grid-column($columns: 12);
+      }
+      
+      > .product-image {
+        @include grid-column($columns: 5);
+      }
+      
+      > .product-content {
+        @include grid-column($columns: 7);
+      }
+    }
+  }
+
   
   .footer-section {
     & > .footer-container {

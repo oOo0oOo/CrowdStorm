@@ -1,0 +1,9 @@
+links:
+  - text: Produkte
+    url: "produkte.html"
+  - text: Dienst&shy;leistung
+    url: "service.html"
+  - text: Über uns
+    url: "#"
+  - text: Kontakt
+    url: "#"

@@ -1,0 +1,9 @@
+<dl class="<%= cssclass %>">
+	<% unless nav.leading.nil? %>
+		<dt><%= nav.leading %></dt>
+	<% end %>
+
+	<% nav.links.each do |link| %>
+		<dd<%= (not (defined?(activeurl) == nil) and link.url == activeurl) ? ' class="active"' : '' %>><a href="<%= link.url %>"><%= link.text%></a></dd>
+	<% end %>
+</dl>

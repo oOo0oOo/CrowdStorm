@@ -22,9 +22,11 @@
 					<div class="logo">
 						<img src="res/img/agevo_logo.png" alt="Agevo Logo" />
 					</div>
+					<nav>
 					<%= partial(:'partials/navigation/navigation', 
 											:locals => { 
-												:nav => data.navigation.main }) %>
+												:nav => data.main_navigation, :cssclass => "main-navigation" }) %>
+					</nav>
 				</div>
 			</header>
 		</section>
@@ -44,26 +46,39 @@
 	    <section class="main-section">
 	    	<header>
 	    		<h1><%= data.page.title %></h1>
+	    		<% if content_for?(:header_content) %>
+	    		<div class="header-content"><%= yield_content :header_content %></div>
+	    		<% end %>
 	    	</header>
-			<div class="content" role="main">
+	    	
+			<% if content_for?(:side_a) %>
+				<aside class="aside-a">
+					<%= yield_content :side_a %>
+				</aside>
+			<% end %>
+	    	
+			<article class="content<%= (content_for?(:side_a) || content_for?(:side_b)) ? ' small' : '' %>" role="main">
 				<%= yield %>
-			</div>
-			<aside class="aside-b">
-				<h2><%= lorem.word.titlecase %></h2>
-				<p><%= lorem.paragraph %></p>
-				<img src="http://www.placehold.it/340x240" alt="Aside B Image" />
-			</aside>
+			</article>
+			
+			<% if content_for?(:side_b) %>
+				<aside class="aside-b">
+					<%= yield_content :side_b %>
+				</aside>
+			<% end %>
 		</section>
 	</div>
 	
 	<footer class="footer-section">
 		<div class="footer-container">
 			<section class="box-a">
-				<h3><%= lorem.word.titlecase %></h3>
-				<p><%= lorem.paragraph %></p>
+				<h3>Produkte</h3>
+				<%= partial(:'partials/navigation/navigation', 
+										:locals => { 
+											:nav => data.products_footer_navigation, :cssclass => "footer-nav", :activeurl => request.path}) %>
 			</section>
 			<section class="box-b">
-				<h4><%= lorem.word.titlecase %></h4>
+				<h3>Service</h3>
 				<ul>
 					<li><%= lorem.word.titlecase %></li>
 					<li><%= lorem.word.titlecase %></li>
@@ -72,13 +87,13 @@
 				<img src="http://www.placehold.it/200x140" alt="Box B Image" />
 			</section>
 			<section class="box-c">
-				<h3><%= lorem.word.titlecase %></h3>
+				<h3>Kontakt&shy;informationen</h3>
 				<img src="http://www.placehold.it/200x140" alt="Box C Image 1" />
 				<h4><%= lorem.word.titlecase %></h4>
 				<img src="http://www.placehold.it/200x140" alt="Box C Image 1" />
 			</section>
 			<section class="box-d">
-				<h3><%= lorem.word.titlecase %></h3>
+				<h3>Connected</h3>
 				<p><%= lorem.sentence %></p>
 			</section>
 		</div>

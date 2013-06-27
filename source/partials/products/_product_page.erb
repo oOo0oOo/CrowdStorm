@@ -1,0 +1,27 @@
+<% content_for :header_visual do %>
+	<%= partial(:'partials/image/interchange_image', :locals => { :interchange_image => key_visual }) %>
+<% end %>
+
+<% unless product_page.side_a.nil? %>
+	<% content_for :side_a do %>
+		<%= product_page.side_a %>
+	<% end %>
+<% end %>
+
+<% unless product_page.side_b.nil? %>
+	<% content_for :side_b do %>
+		<%= product_page.side_b %>
+	<% end %>
+<% end %>
+
+<% content_for :header_content do %>
+	<%= partial(:'partials/navigation/sub_navigation', 
+							:locals => { 
+								:nav => data.products_sub_navigation, :cssclass => "sub-nav", :activeurl => request.path}) %>
+<% end %>
+
+<div class="products">
+	<%= partial(:'partials/products/product_info', 
+							:locals => { 
+								:product_info => product_page.product_info}) %>
+</div>
