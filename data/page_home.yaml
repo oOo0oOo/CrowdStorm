@@ -10,7 +10,7 @@ carousel:
       button:
         icon: "&#xe0fc;"
         text: Erfahren Sie mehr
-        href: "#"
+        href: "produkte.html"
     - image: 
         alt: Vertrauen
         title: Wir schaffen Vertrauen
@@ -20,7 +20,7 @@ carousel:
       button:
         icon: "&#xe0fc;"
         text: Erfahren Sie mehr
-        href: "#"
+        href: "service.html"
     - image: 
         alt: Rechtsschutz
         title: Wir schaffen Vertrauen
@@ -30,4 +30,4 @@ carousel:
       button:
         icon: "&#xe0fc;"
         text: Erfahren Sie mehr
-        href: "#"
+        href: "rechtsschutz.html"
