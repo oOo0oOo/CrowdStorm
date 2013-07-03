@@ -20,7 +20,9 @@
 			<header>
 				<div class="header-container">
 					<div class="logo">
-						<a href="/"><img src="res/img/agevo_logo.png" alt="Agevo Logo" /></a>
+						<a href="/">
+							<img src="res/img/agevo_logo.svg" alt="AGEVO Versicherungen Logo" onerror="this.removeAttribute('onerror'); this.src='res/img/agevo_logo.png'" />
+						</a>
 					</div>
 					<nav>
 					<%= partial(:'partials/navigation/navigation', 
@@ -80,21 +82,21 @@
 			<section class="box-b">
 				<h3>Service</h3>
 				<ul>
-					<li><%= lorem.word.titlecase %></li>
-					<li><%= lorem.word.titlecase %></li>
-					<li><%= lorem.word.titlecase %></li>
+					<li><a href="service.html#krankenkassen">Krankenkassen</a></li>
+					<li><a href="service.html#ansprechpartner">Ihr Ansprechpartner</a></li>
+					<li><a href="service.html#privatpersonen">Privatpersonen</a></li>
+					<li><a href="service.html#kmu">KMU</a></li>
 				</ul>
-				<img src="http://www.placehold.it/200x140" alt="Box B Image" />
 			</section>
 			<section class="box-c">
 				<h3>Kontakt&shy;informationen</h3>
-				<div class="info-box" data-icon="&#xe1bf;">
-					<strong>AGEVO Vericherungen GmbH</strong>
-					<br/>Lorem Ipsum 99
-					<br/>8000 Lorem
+				<div class="icon-box" data-icon="&#xe1bf;">
+					<p><strong>AGEVO Vericherungen GmbH</strong>
+					<br/>Salomon-Vögelin-Strasse 31
+					<br/>8038 Zürich</p>
 				</div>
-				<div class="info-box" data-icon="&#xe060;">info@agevo.ch</div>
-				<div class="info-box" data-icon="&#xe186;"><a href="tel:+41444444444">+41 44 444 44 44</a></div>
+				<div class="icon-box" data-icon="&#xe060;"><a href="mailto:contact@agevo.ch">contact@agevo.ch</a></div>
+				<div class="icon-box" data-icon="&#xe186;"><a href="tel:+41799003030">+41 79 900 30 30</a></div>
 			</section>
 			<section class="box-d">
 				<h3>Connected</h3>
