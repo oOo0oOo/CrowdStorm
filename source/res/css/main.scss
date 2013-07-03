@@ -28,9 +28,7 @@
 }
 
 .info-box { 
-  @include spline-icon-box(attr(data-icon), $icon-size: 3em, $icon-padding: 1em, $icon-color: $agevo-grey);
-  padding-top: 1em;
-  padding-right: 1em;
+  @include spline-icon-box(attr(data-icon), $icon-size: 3em, $icon-padding: 1em, $icon-color: $agevo-grey, $vertical-position: top);
   padding-bottom: 1em;
 }
 
@@ -125,6 +123,8 @@
    > .top-bar-section {
       > ul {
         > li {
+          line-height: 40px;
+          
           > a {
             font-weight: normal;
             
@@ -150,8 +150,10 @@
     		  @include grid-column($columns: 12);
     		  text-align: center;
     		  
-    		  > img {
+    		  img {
     		    display: inline-block;
+    		    width: 100%;
+    		    height: auto;
     		  }
     		}
         
@@ -291,24 +293,30 @@
   > .footer-container {
     @include grid-row();
     
+    .icon-box {
+      @include spline-icon-box(attr(data-icon), $icon-size: 2em, $icon-padding: 1em, $icon-color: $agevo-grey, $vertical-position: middle);
+      margin-bottom: 1.5em;
+    }
+    
+      
+    ul {
+      list-style: none;
+      margin: 0;
+      
+      > li {
+        
+        
+        &:before { 
+          content: "-";
+          margin-right: 1em;            
+        };
+      }
+    }
+    
     > .box-a {
       margin-top: 1.5em;
       
       @include grid-column($columns: 12);
-      
-      > .footer-nav {
-        list-style: none;
-        margin: 0;
-        
-        > li {
-          
-          
-          &:before { 
-            content: "-";
-            margin-right: 1em;            
-          };
-        }
-      }
     }
     
     > .box-b {

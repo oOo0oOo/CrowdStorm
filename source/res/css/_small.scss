@@ -1,24 +1,12 @@
 // Small layout 
 @media #{$small} {
   .top-wrapper {
-    /*> .top-bar {
-      > .top-bar-section {
-        > ul {
-          > li {
-            > a {
-              padding-top: 0;
-              padding-bottom: 0;
-            }
-          }
-        }
-      }
-    }*/
     
     .header-section {
       & > header {
         & > .header-container {
           & > .logo {
-            @include grid-column($columns: 4);
+            @include grid-column($columns: 5);
             text-align: left;
           }
     
@@ -63,7 +51,7 @@
     }
     
     > .product-teaser-blocks {
-      @include block-grid(3);
+      @include block-grid(2);
     }
   }
 

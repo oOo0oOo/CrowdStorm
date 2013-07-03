@@ -9,7 +9,7 @@
           margin-bottom: 1em;
           
           > .logo {
-            @include grid-column($columns: 12);
+            @include grid-column($columns: 4);
             text-align: left;
           }
           
@@ -70,7 +70,7 @@
   
   .products {
     > .product-teaser-blocks {
-      @include block-grid(4);
+      @include block-grid(3);
     }
   }
   
