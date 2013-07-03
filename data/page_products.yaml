@@ -14,38 +14,47 @@ product_teasers:
     lead: Rund um die Gesundheit
     link: krankenkasse.html
     image: res/img/content_health_family_s.jpg
+
   - title: Leben
     lead: Lösungen für den ungenügenden Schutz bei Invalidität oder Todesfall für Sie und Ihre Familie
     link: leben.html
-    image: res/img/content_health_family_s.jpg
-  - title: Reise
-    lead: Reiselustig? Wir bieten die nötige Absicherung.
-    link: reise.html
-    image: res/img/content_travel_airplane_s.jpg
-  - title: Haftpflicht
-    lead: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
-    link: haftpflicht.html
-    image: res/img/content_liability_s.jpg
+    image: res/img/content_life_s.jpg
+
   - title: Hausrat
     lead: Schützten Sie ihre beweglichen Sachen zu Hause und auswärts
     link: hausrat.html
     image: res/img/content_contents_s.jpg
-  - title: Auto
-    lead: Die richtige Wahl der Zusatz-Versicherungen schützt Sie und Ihr Auto vor grossem Wertzerfall
-    link: auto.html
-    image: res/img/content_car_s.jpg
-  - title: Motorrad
-    lead: Schützen Sie sich und Ihr Motorrad bei Unfall oder Diebstahl
-    link: motorrad.html
-    image: res/img/content_bike_s.jpg
+
   - title: Rechtsschutz
     lead: Rechtsberatung, Vertretung vor Gericht und Übernahme teurer Anwaltskosten im Paket
     link: rechtsschutz.html
     image: res/img/content_legal_s.jpg
+
+  - title: Auto
+    lead: Die richtige Wahl der Zusatz-Versicherungen schützt Sie und Ihr Auto vor grossem Wertzerfall
+    link: auto.html
+    image: res/img/content_car_s.jpg
+    
+  - title: Motorrad
+    lead: Schützen Sie sich und Ihr Motorrad bei Unfall oder Diebstahl
+    link: motorrad.html
+    image: res/img/content_bike_s.jpg
+    
+  - title: Haftpflicht
+    lead: "Ein Muss: Schutz für Schäden, welche Sie Dritten oder fremdem Eigentum zufügen"
+    link: haftpflicht.html
+    image: res/img/content_liability_s.jpg
+    
   - title: Wertsachen
     lead: Sicherheit für wertvolle Sachen
     link: wertsachen.html
     image: res/img/content_valuables_s.jpg
+    
+  - title: Reise
+    lead: Reiselustig? Wir bieten die nötige Absicherung.
+    link: reise.html
+    image: res/img/content_travel_airplane_s.jpg
+    
 sub_pages:
   health:
     product_infos:
@@ -85,7 +94,7 @@ sub_pages:
             - media: small
               src: res/img/content_travel_airplane_m.jpg
         content: >
-            <p>Sorglosgarantie vor, während und kurz nachdem Sie in den Ferien ihre schönen Tage verbringen</p>
+            <p>Sorglosgarantie vor, während und kurz nachdem Sie in den Ferien Ihre schönen Tage verbringen.</p>
             <p>Der Abschluss einer Reiseversicherung gehört zur Reisevorbereitung, denn für wenig Geld kann man sich gegen die finanziellen Folgen von Krankheiten, Unfällen und Naturkatastrophen absichern. </p>
             <p>Sie beinhaltet den Annullierungsschutz und die Personen-Assistance. Sie deckt die Kosten einer frühzeitigen Rückreise, einer Bergung oder Rettung aufgrund von während der Reise eintretenden Risiken. Auch eine nur vorübergehende Heimkehr oder zusätzlich verursachte Hotelaufenthalte sind gedeckt.</p>
   liability:
@@ -180,7 +189,7 @@ sub_pages:
             - media: small
               src: res/img/content_legal_m.jpg
         content: >
-            <p>Eine Rechtsschutzversicherung (Privat- und Verkehrs-Rechtsschutz) unterstützt Sie, wenn Sie z. B. einen Rechtsanwalt brauchen oder vor Gericht erscheinen müssen.</p>
+            <p>Eine Rechtsschutzversicherung (Privat- und Verkehrs-Rechtsschutz) unterstützt Sie, wenn Sie z.B. einen Rechtsanwalt brauchen oder vor Gericht erscheinen müssen.</p>
             <p>Sie übernimmt die Kosten für Anwalt, Expertisen und Gericht sowie der Gegenpartei zugesprochene Entschädigungen bis CHF 500'000.– pro Schadenfall.</p>
             <p>Sie können die Privat-Rechtsschutzversicherung einzeln oder in Kombination mit der Verkehrs-Rechtsschutz-Versicherung abschliessen.</p>
   life:
@@ -189,12 +198,12 @@ sub_pages:
         interchange_image:
           alt: Familie
           title: "Lösungen für den ungenügenden Schutz bei Invalidität oder Todesfall für Sie und Ihre Familie"
-          src: res/img/content_health_family_s.jpg
+          src: res/img/content_life_s.jpg
           sizes:
             - media: default
-              src: res/img/content_health_family_s.jpg
+              src: res/img/content_life_s.jpg
             - media: small
-              src: res/img/content_health_family_m.jpg
+              src: res/img/content_life_m.jpg
         content: >
             <p>Lebensversicherungen lassen sich grob in Kapital- und Risikoversicherungen unterteilen. Bei Kapitalversicherungen wird mit Spareinlagen Vermögen gebildet, Risikoversicherungen versichern hingegen ein bestimmtes Risiko.</p>
             <p>Die Todesfallversicherung deckt das finanzielle Risiko des Todesfalls. Stirbt eine versicherte Person während der Laufzeit, erhalten die Begünstigten die versicherte Geldleistung.</p>
@@ -226,8 +235,8 @@ sub_pages:
               src: res/img/content_valuables_m.jpg
         content: >
             <p>Die Wertsachen-Versicherung bietet zusätzliche Sicherheit für die besonders wertvollen Dinge in Ihrem Haushalt.</p>
-            <p>Sie ist die ideale Ergänzung zu Ihrer Hausrat-Versicherung. Wir übernehmen Ihren Schaden sowohl bei Diebstahl, Zerstörung oder Verlust.</p>
-            <p>In der Hausrat-Versicherung können Sie kleinere Schmuckstücke versichern</p>
+            <p>Sie ist die ideale Ergänzung zu Ihrer Hausrat-Versicherung. Die Schäden werden sowohl bei Diebstahl, Zerstörung oder Verlust von der Versicherung übernommen.</p>
+            <p>In der Hausrat-Versicherung können Sie kleinere Schmuckstücke versichern.</p>
     side_b: >
               <h4>Versichern Sie folgendes mit einer Wertsachen-Versicherung</h4>
               <ul>
