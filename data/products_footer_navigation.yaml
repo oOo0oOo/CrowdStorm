@@ -3,18 +3,18 @@ links:
     url: "krankenkasse.html"
   - text: Leben
     url: "leben.html"
-  - text: Reise
-    url: "reise.html"
-  - text: Haftpflicht
-    url: "haftpflicht.html"
   - text: Hausrat
     url: "hausrat.html"
+  - text: Rechtsschutz
+    url: "rechtsschutz.html"
   - text: Auto
     url: "auto.html"
   - text: Motorrad
     url: "motorrad.html"
-  - text: Rechtsschutz
-    url: "rechtsschutz.html"
+  - text: Haftpflicht
+    url: "haftpflicht.html"
   - text: Wertsachen
     url: "wertsachen.html"
+  - text: Reise
+    url: "reise.html"
 
