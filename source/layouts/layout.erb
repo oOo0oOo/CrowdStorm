@@ -1,109 +1,22 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <title><%= data.page.title || "Agevo" %></title>
-    
-    <%= stylesheet_link_tag "main" %>
-  </head>
-  
-  <body>
-  	<div class="top-wrapper">
-	  	<%= partial(:'partials/navigation/top_navigation') %>
-		<section class="header-section">
-			<header>
-				<div class="header-container">
-					<div class="logo">
-						<a href="/">
-							<img src="res/img/agevo_logo.svg" alt="AGEVO Versicherungen Logo" onerror="this.removeAttribute('onerror'); this.src='res/img/agevo_logo.png'" />
-						</a>
-					</div>
-					<nav>
-					<%= partial(:'partials/navigation/navigation', 
-											:locals => { 
-												:nav => data.main_navigation, :cssclass => "main-navigation" }) %>
-					</nav>
-				</div>
-			</header>
-		</section>
-		
-		<% if content_for?(:header_visual) %>
-		<section class="key-visual-section">
-			<%= yield_content :header_visual %>
-		</section>
-		<% end %>
-		
-		<% if content_for?(:header_carousel) %>
-		<section class="carousel-section">
-			<%= yield_content :header_carousel %>
-		</section>
-		<% end %>
-		
-	    <section class="main-section">
-	    	<header>
-	    		<% if content_for?(:header_content) %>
-	    		<div class="header-content"><%= yield_content :header_content %></div>
-	    		<% end %>
-	    		<h1><%= data.page.title %></h1>
-	    	</header>
-	    	
-			<% if content_for?(:side_a) %>
-				<aside class="aside-a">
-					<%= yield_content :side_a %>
-				</aside>
-			<% end %>
-	    	
-			<article class="content<%= (content_for?(:side_a) || content_for?(:side_b)) ? ' small' : '' %>" role="main">
-				<%= yield %>
-			</article>
-			
-			<% if content_for?(:side_b) %>
-				<aside class="aside-b">
-					<%= yield_content :side_b %>
-				</aside>
-			<% end %>
-		</section>
-	</div>
-	
-	<footer class="footer-section">
-		<div class="footer-container">
-			<section class="box-a">
-				<h3>Produkte</h3>
-				<%= partial(:'partials/navigation/navigation', 
-										:locals => { 
-											:nav => data.products_footer_navigation, :cssclass => "footer-nav", :activeurl => request.path}) %>
-			</section>
-			<section class="box-b">
-				<h3>Service</h3>
-				<ul>
-					<li><a href="service.html#krankenkassen">Krankenkassen</a></li>
-					<li><a href="service.html#ansprechpartner">Ihr Ansprechpartner</a></li>
-					<li><a href="service.html#privatpersonen">Privatpersonen</a></li>
-					<li><a href="service.html#kmu">KMU</a></li>
-				</ul>
-			</section>
-			<section class="box-c">
-				<h3>Kontakt&shy;informationen</h3>
-				<div class="icon-box" data-icon="&#xe1bf;">
-					<p><strong>AGEVO Vericherungen GmbH</strong>
-					<br/>Salomon-Vögelin-Strasse 31
-					<br/>8038 Zürich</p>
-				</div>
-				<div class="icon-box" data-icon="&#xe060;"><a href="mailto:contact@agevo.ch">contact@agevo.ch</a></div>
-				<div class="icon-box" data-icon="&#xe186;"><a href="tel:+41799003030">+41 79 900 30 30</a></div>
-			</section>
-			<section class="box-d">
-				<h3>Connected</h3>
-				<p><%= lorem.sentence %></p>
-			</section>
-		</div>
-	</footer>
-    <%= javascript_include_tag  "boot" %>
-  </body>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Foundation 4</title>
+
+  <link rel="stylesheet" href="stylesheets/normalize.css" />
+  <link rel="stylesheet" href="stylesheets/app.css" />
+
+  <script src="javascripts/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+  <%= yield %>
+
+  <script src="javascripts/app.js"></script>
+</body>
 </html>

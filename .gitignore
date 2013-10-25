@@ -12,8 +12,3 @@
 
 # Ignore Sass' cache
 /.sass-cache
-
-
-# Ignore eclipse project
-.project
-

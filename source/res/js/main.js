@@ -1,5 +1,0 @@
-//= require '_jquery-1.9.1.js'
-//= require 'foundation/_foundation.js'
-//= require 'foundation/_foundation.topbar.js'
-//= require 'foundation/_foundation.interchange.js'
-//= require 'foundation/_foundation.orbit.js'

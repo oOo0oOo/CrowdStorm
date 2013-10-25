@@ -1,5 +1,0 @@
-<ul class="<%= cssclass %>">
-	<% nav.links.each do |link| %>
-		<li><a href="<%= link.url %>"<%= (not (defined?(activeurl) == nil) and link.url == activeurl) ? ' class="active"' : '' %>><%= link.text%></a></li>
-	<% end %>
-</ul>
