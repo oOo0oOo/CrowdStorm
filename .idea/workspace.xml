@@ -2,151 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7381eca7-8f2d-4672-91f4-328817318b64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/crowdstorming.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/main_navigation.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/page_about.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/page_contact.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/page_home.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/page_products.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/page_service.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/products_footer_navigation.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/products_sub_navigation.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/auto.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/haftpflicht.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/hausrat.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/kontakt.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/krankenkasse.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/layouts/layout.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/leben.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/motorrad.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/carousel/_carousel.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/frontpage/_frontpage.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/image/_interchange_image.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/navigation/_navigation.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/navigation/_sub_navigation.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/navigation/_top_navigation.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/products/_product_info.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/products/_product_page.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/partials/products/_product_teaser.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/produkte.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/rechtsschutz.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/reise.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/_base.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/_fonts.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/_medium.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/_small.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/fonts/agevo-icons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/fonts/agevo-icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/fonts/agevo-icons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/fonts/agevo-icons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/_foundation.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/_spline.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_alert-boxes.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_block-grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_breadcrumbs.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_button-groups.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_buttons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_clearing.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_custom-forms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_dropdown-buttons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_dropdown.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_flex-video.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_forms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_global.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_inline-lists.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_joyride.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_keystrokes.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_labels.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_magellan.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_orbit.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_pagination.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_panels.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_pricing-tables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_progress-bars.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_reveal.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_section.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_side-nav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_split-buttons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_sub-nav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_switch.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_tables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_thumbs.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_tooltips.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_top-bar.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_type.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/css/vendor/foundation/components/_visibility.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/agevo_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/agevo_logo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/carousel_rechtsschutz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/carousel_sparen.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/carousel_vertrauen.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_bike_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_bike_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_car_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_car_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_contents_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_contents_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_health_family_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_health_family_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_legal_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_legal_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_liability_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_liability_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_life_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_life_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_travel_airplane_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_travel_airplane_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_valuables_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/content_valuables_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_about_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_about_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_about_xl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_contact_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_contact_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_contact_xl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_products_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_products_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_products_xl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_service_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_service_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/img/header_service_xl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/boot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/_jquery-1.9.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/_modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.alerts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.clearing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.forms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.interchange.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.joyride.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.magellan.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.orbit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.placeholder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.reveal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.section.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.tooltips.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_foundation.topbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/res/js/vendor/foundation/_index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/service.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/ueber-uns.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/wertsachen.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/javascripts/app.js" afterPath="$PROJECT_DIR$/source/javascripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="crowdstorming.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -189,11 +46,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="normalize.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="normalize.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/stylesheets/normalize.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="143" selection-start="497" selection-end="497" vertical-scroll-proportion="0.6131387">
+            <state line="14" column="7" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="25" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/javascripts/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="44" selection-start="833" selection-end="833" vertical-scroll-proportion="0.7486911">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -228,14 +105,15 @@
         <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/source/javascripts/app.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="32" />
-    <option name="width" value="1900" />
-    <option name="height" value="973" />
+    <option name="x" value="1984" />
+    <option name="y" value="-4" />
+    <option name="width" value="1857" />
+    <option name="height" value="1018" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -365,6 +243,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crowdstorming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crowdstorming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crowdstorming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crowdstorming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dhotson-springy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -378,6 +304,62 @@
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -390,15 +372,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="32" width="1900" height="973" extended-state="0" />
+    <frame x="1984" y="-4" width="1857" height="1018" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3301887" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6698113" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25594252" sideWeight="0.6707727" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -494,15 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/javascripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/stylesheets/_foundation.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -533,8 +506,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/stylesheets/normalize.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="143" selection-start="497" selection-end="497" vertical-scroll-proportion="0.6131387">
+        <state line="14" column="7" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="25" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/javascripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="44" selection-start="833" selection-end="833" vertical-scroll-proportion="0.7486911">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

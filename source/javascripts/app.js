@@ -1,8 +1,8 @@
 // Require either Zepto
-//= require vendor/zepto
+// require vendor/zepto
 
 // or jQuery
-// require vendor/jquery
+//= require vendor/jquery
 
 
 // All Foundation javascript libraries
@@ -23,5 +23,9 @@
 // require foundation/foundation.section
 // require foundation/foundation.tooltips
 // require foundation/foundation.topbar
+
+
+//= require vendor/dhotson-springy/springy.js
+//= require vendor/dhotson-springy/springyui.js
 
  $(document).foundation();
