@@ -82,6 +82,6 @@ $(document).on('serveredge', function(event, edge) {
     var sourceNode = findNodeByGuid(edge.source);
     var targetNode = findNodeByGuid(edge.target);
 
-    var params = {source: sourceNode, target: targetNode};
+    var params = {source: sourceNode, target: targetNode, data: {}};
     $(document).trigger('drawedge', params);
 });
