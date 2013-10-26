@@ -92,10 +92,15 @@ jQuery.fn.springy = function(params) {
         layout.eachSpring(function(spring){
             mid_x = (spring.point1.p.x  + spring.point2.p.x)/2;
             mid_y = (spring.point1.p.y  + spring.point2.p.y)/2;
-            console.log(mid_x + '      ' + mid_y);
+            var len = Math.sqrt(Math.pow(mid_x) + Math.pow(mid_y));
+            console.log(len);
+            if (len < 4){
+
+            };
         });
 
         set_node_masses(25000);
+
 		selected = nearest = dragged = layout.nearest(p);
 
 		if (selected.node !== null) {
