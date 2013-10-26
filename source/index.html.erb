@@ -11,6 +11,7 @@ title: Welcome to Foundation
   </div>
 </header>
 
+<section class="introduction">
   <div class="row">
     <div class="large-8 columns">
       <h3>Start to share your thoughts!</h3>
@@ -22,10 +23,10 @@ title: Welcome to Foundation
             <p>Specify a username to start the real-time collaboration on a brainstorming session.</p>
             <div class="row collapse">
               <div class="small-10 columns">
-                <input type="text" placeholder="Username">
+                <input id="userName" type="text" placeholder="Username">
               </div>
               <div class="small-2 columns">
-                <a href="#" class="button prefix">Start!</a>
+                <a id="startStorm" href="#" class="button prefix">Start!</a>
               </div>
             </div>
           </div>
@@ -55,3 +56,12 @@ title: Welcome to Foundation
       <p>Collaborate instantly and with a big crowd to collect ideas and information. Within minutes this collaborative brain storming tool allows you to collect a massive amount of information. Crowd based idea management helps your company to conduct innovation </p>
     </div>
   </div>
+</section>
+
+<section class="storm-plane">
+  <div class="row">
+    <div class="large-12 columns">
+       <canvas id="stormCanvas" width="800" height="600"></canvas>
+    </div>
+  </div>
+</section>

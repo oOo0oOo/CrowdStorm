@@ -32,6 +32,17 @@
 
 //= require _cs-client.js
 
+//= require _cs-canvas.js
+
 $(document).foundation();
 
-$(document).csClient();
+$(document).on('click', '#startStorm', function(event){
+    event.preventDefault();
+
+    window.csClient = $(document).csClient({user: $('#userName').val()});
+    $(document).trigger('loggedin');
+});
+
+$(document).on('loggedin', function() {
+
+});

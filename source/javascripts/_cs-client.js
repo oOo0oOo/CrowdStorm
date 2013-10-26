@@ -44,17 +44,19 @@ var sampleMessages = [
         var socket = new WebSocket(settings.server);
 
         socket.onopen = function () {
-            socket.send(JSON.stringify(sampleMessages[0]));
+            socket.send('name:' + settings.user);
         }
 
         socket.onmessage = function (event) {
             var data = JSON.parse(event.data);
-            if(data instanceof Object && (data.type === "node" || data.type == "")) {
+            if(data instanceof Object) {
                 nodeMap.push(data);
+
+                if(data.type === "node") {
+
+                }
             }
         };
-
-
 
         return this;
     };
