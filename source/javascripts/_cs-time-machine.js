@@ -47,8 +47,8 @@ var trigger_drawing = function(state){
     // And edges
     state.links.forEach(function(l){
         // find involved nodes
-        var filter1 = function(n){return (n.guid == l.nodeA)};
-        var filter2 = function(n){return (n.guid == l.nodeB)};
+        var filter1 = function(n){return (n.guid == l.source)};
+        var filter2 = function(n){return (n.guid == l.target)};
         var node1 = graph.filterNodes(filter1);
         var node2 = graph.filterNodes(filter2);
         $(document).trigger('drawedge', {source: node1, target: node2, data: {}});
