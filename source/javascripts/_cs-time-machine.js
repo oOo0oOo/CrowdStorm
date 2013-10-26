@@ -11,10 +11,33 @@ var State = function() {
     this.links = [];
 };
 
-// Calculate a  state from the log
+// Calculate a  state from the log file up until time_stamp
 var reconstruct_state(log_file, time_stamp){
     state = State();
 
+    // Loop through log in reverse order
+    for (var i=log_file.length;i==0;i--){
+        var event = log_file[i];
+
+        // End if at desired point in time
+        if (event.time > time_stamp){
+            break;
+        };
+
+        // Add nodes or edges
+        if(data instanceof Object) {
+            switch(data.type){
+                case 'node':
+                    state.nodes.push(data);
+                    break;
+                case 'link':
+                    state.links.push(data);
+                    break;
+            }
+        };
+    };
+
+    return state;
 
 };
 
