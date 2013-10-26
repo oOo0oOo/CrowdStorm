@@ -76,9 +76,26 @@ jQuery.fn.springy = function(params) {
 	var nearest = null;
 	var dragged = null;
 
+
+    // Set mass of all nodes (their representation in layout)
+    var set_node_masses = function(mass){
+        layout.eachNode(function(n, p){
+            p.m = mass;
+        });
+    };
+
 	jQuery(canvas).mousedown(function(e) {
-		var pos = jQuery(this).offset();
-		var p = fromScreen({x: e.pageX - pos.left, y: e.pageY - pos.top});
+        var pos = jQuery(this).offset();
+        var p = fromScreen({x: e.pageX - pos.left, y: e.pageY - pos.top});
+
+        // Check if one of the delete buttons is clicked: Fuck i hate doing this...
+        layout.eachSpring(function(spring){
+            mid_x = (spring.point1.p.x  + spring.point2.p.x)/2;
+            mid_y = (spring.point1.p.y  + spring.point2.p.y)/2;
+            console.log(mid_x + '      ' + mid_y);
+        });
+
+        set_node_masses(25000);
 		selected = nearest = dragged = layout.nearest(p);
 
 		if (selected.node !== null) {
@@ -92,40 +109,38 @@ jQuery.fn.springy = function(params) {
 		renderer.start();
 	});
 
-    /// Finish half assed drag and drop (adding drop)
+    /// Finish half-assed drag and drop (adding drop)
     jQuery(canvas).mouseup(function(e) {
         var p = jQuery(this).offset();
         var pos = fromScreen({x: e.pageX - p.left, y: e.pageY - p.top});
 
         // Find the second closest (closest is always nod itself)
-        var min = {node: null, point: null, distance: null};
-        var second = null;
+        var min = {node: null, distance: null};
+        var second = {node: null, distance: null};
 
         var t = layout;
         t.graph.nodes.forEach(function(n){
             var point = t.point(n);
             var distance = point.p.subtract(pos).magnitude();
-            if (min.distance === null || distance < min.distance) {
+            if (min.distance == null || distance < min.distance) {
                 second = min;
                 min = {node: n, distance: distance};
             }
         });
 
-        console.log(second.distance);
+        set_node_masses(1);
 
-        if (second.node == null || second.distance > 2){
-            return;
+        if (second.node === null || second.distance > 1.0){
+            dragged = null;
+            return false;
         };
 
-        console.log('creating link, min:' + min.node.data.label);
         if (dragged !== null && dragged.node !== null) {
-            // dragged = null;
+            dragged = null;
             var params = { source: min.node, target: second.node, data: {}};
             var e = jQuery.Event( 'newedge', {params: params});
             $(document).trigger( e );
         }
-
-        renderer.stop();
     });
 
 
@@ -161,9 +176,11 @@ jQuery.fn.springy = function(params) {
 		renderer.start();
 	});
 
+    /*
 	jQuery(window).bind('mouseup',function(e) {
 		dragged = null;
 	});
+	*/
 
 	Springy.Node.prototype.getWidth = function() {
 		var text = (this.data.label !== undefined) ? this.data.label : this.id;
@@ -282,6 +299,26 @@ jQuery.fn.springy = function(params) {
 				ctx.fillText(text, (x1+x2)/2, (y1+y2)/2);
 				ctx.restore();
 			}
+
+            var mid_x =  (x1+x2)/2;
+            var mid_y =  (y1+y2)/2;
+
+            /// Remove Edge Button
+            ctx.fillStyle = "#CC333F";
+            ctx.beginPath();
+            ctx.arc(mid_x, mid_y, 10, 0, Math.PI*2, true);
+            ctx.closePath();
+            ctx.fill();
+
+            /// And the minus sign
+            ctx.strokeStyle = "#EDC951";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(mid_x -4 , mid_y);
+            ctx.lineTo(mid_x + 4, mid_y);
+            ctx.stroke();
+            ctx.restore();
+
 
 		},
 		function drawNode(node, p) {

@@ -17,6 +17,7 @@ $( document ).ready(function() {
         damping: 0.3
     });
 
+    /*
     // Set mass of all nodes (their representation in layout)
     var set_node_masses = function(mass){
         springy.layout.eachNode(function(n, p){
@@ -36,6 +37,7 @@ $( document ).ready(function() {
         set_node_masses(1);
     });
 
+    */
 
     // Node Drawing Event Listener
     $(document).bind('drawnode', function(data){
@@ -66,7 +68,6 @@ $( document ).ready(function() {
     // Add a random node
     $(document).on('click', '#add_random_node', function(){
         // Set masses low to enable layouting
-        set_node_masses(1);
         var size = 25 + Math.random() * 30;
         var new_node = graph.newNode({label: 'Child', guid: '2', color: '#00A0B0', size: size, style: 'square'});
 
