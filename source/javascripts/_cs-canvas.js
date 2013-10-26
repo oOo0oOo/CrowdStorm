@@ -7,7 +7,7 @@
  */
 $( document ).ready(function() {
     var graph = new Springy.Graph();
-    var initial_node = graph.newNode({label: 'Parent', guid: '1', size: 40, color: '#EDC951', style: 'circle'});
+    //var initial_node = graph.newNode({label: 'Parent', guid: '1', size: 40, color: '#EDC951', style: 'circle'});
 
     // Initialize springy
     var springy = window.springy = jQuery('#stormCanvas').springy({
@@ -40,13 +40,13 @@ $( document ).ready(function() {
     */
 
     // Node Drawing Event Listener
-    $(document).bind('drawnode', function(event, data){
-        graph.newNode(data.params);
+    $(document).bind('drawnode', function(event, params){
+        graph.newNode(params);
     });
 
     // Edge drawing event listener
-    $(document).bind('drawedge', function(event, data){
-        graph.newEdge(data.params.source, data.params.target, data.params.data);
+    $(document).bind('drawedge', function(event, params){
+        graph.newEdge(params.source, params.target, params.data);
     });
 
 
@@ -58,9 +58,9 @@ $( document ).ready(function() {
     });*/
 
     // EDGE MOCK REDIRECT
-    $(document).bind('newedge', function(event, params){
+    /*$(document).bind('newedge', function(event, params){
         $(document).trigger('drawedge', params );
-    });
+    });*/
 
 
     // Add a random node

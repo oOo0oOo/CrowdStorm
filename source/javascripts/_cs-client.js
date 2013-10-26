@@ -11,12 +11,12 @@ var sampleMessages = [
         user: "User 1",
         content: "Second Test Content"},
 
-    {type: "link",
+    {type: "edge",
         guid: "81315AE5-6DE5-4930-9EEC-33A8F05881E6",
         time: 1234567890125,
         user: "User 1",
-        nodeA: "936DA01F-9ABD-4D9D-80C7-02AF85C822A8",
-        nodeB: "9AFA6424-21E4-4B91-B9B1-C73F81B8CDD9"}
+        source: "936DA01F-9ABD-4D9D-80C7-02AF85C822A8",
+        target: "9AFA6424-21E4-4B91-B9B1-C73F81B8CDD9"}
 ];
 
 (function ($) {
@@ -59,8 +59,10 @@ var sampleMessages = [
             if(data instanceof Object) {
                 nodeMap.push(data);
 
-                if(data.type === "node") {
+                if(data.type === 'node') {
                     $(document).trigger('servernode', data);
+                } else if(data.type === 'edge') {
+                    $(document).trigger('serveredge', data);
                 }
             }
         };
@@ -68,9 +70,15 @@ var sampleMessages = [
         this.generateAndSendNode = function(content) {
             var generatedGuid = guid();
             var node = {type: 'node', guid: generatedGuid, time: new Date().getTime(), user: settings.user, content: content};
-            nodeMap.push(node);
             socket.send(JSON.stringify(node));
             return node;
+        }
+
+        this.generateAndSendEdge = function(params) {
+            var generatedGuid = guid();
+            var edge = {type: 'edge', guid: generatedGuid, time: new Date().getTime(), user: settings.user, source: params.source.data.guid, target: params.target.data.guid};
+            socket.send(JSON.stringify(edge));
+            return edge;
         }
 
         return this;

@@ -53,7 +53,33 @@ $(document).on('newnode', function(event, content) {
     csClient.generateAndSendNode(content);
 });
 
+$(document).on('newedge', function(event, params) {
+    csClient.generateAndSendEdge(params);
+});
+
 $(document).on('servernode', function(event, node) {
     var params = {label: node.content, guid: node.guid, size: 45, color: '#20A0B0', style: 'square'};
-    $(document).trigger('drawnode', { params: params });
+    $(document).trigger('drawnode', params);
+});
+
+$(document).on('serveredge', function(event, edge) {
+
+    function findNodeByGuid(guid) {
+        var foundNode;
+
+        springy.layout.graph.nodes.forEach(function(n){
+            if(n.data.guid === guid) {
+                foundNode = n;
+                return false;
+            }
+        });
+
+        return foundNode;
+    }
+
+    var sourceNode = findNodeByGuid(edge.source);
+    var targetNode = findNodeByGuid(edge.target);
+
+    var params = {source: sourceNode, target: targetNode};
+    $(document).trigger('drawedge', params);
 });

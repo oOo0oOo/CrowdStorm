@@ -13,4 +13,5 @@
 # Ignore Sass' cache
 /.sass-cache
 
-/.idea
+/.idea/*
+.idea/workspace.xml
