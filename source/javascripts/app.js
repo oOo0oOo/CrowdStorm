@@ -28,4 +28,10 @@
 //= require vendor/dhotson-springy/springy.js
 //= require vendor/dhotson-springy/springyui.js
 
- $(document).foundation();
+//= require vendor/jquery.gracefulWebSocket.js
+
+//= require _cs-client.js
+
+$(document).foundation();
+
+$(document).csClient();

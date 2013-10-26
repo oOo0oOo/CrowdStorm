@@ -1,6 +1,15 @@
 // Required global settings and mixins for Foundation
 @import "foundation/foundation-global";
 
+
+// Custom settings
+$page-header-font: 'Fredoka One', cursive;
+$page-header-font-size: emCalc(100px);
+
+
+
+
+
 // Settings file to override Foundation variables
 
 // You can find the variables for each component at the bottom of their
@@ -17,7 +26,7 @@
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: 'Lato', sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -85,7 +94,7 @@
 //
 
 // We use these to control header font styles
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: 'Lato', sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
