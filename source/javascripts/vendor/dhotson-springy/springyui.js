@@ -369,9 +369,9 @@ jQuery.fn.springy = function(params) {
             };
 			ctx.textAlign = "left";
 			ctx.textBaseline = "top";
-			ctx.font = "16px Verdana, sans-serif";
+			ctx.font = "16px 'Lato', sans-serif";
 			ctx.fillStyle = "#000000";
-			ctx.font = "16px Verdana, sans-serif";
+			ctx.font = "16px 'Lato', sans-serif";
 			var text = (d.label !== undefined) ? d.label : node.id;
 			ctx.fillText(text, s.x - boxWidth/2 + 5, s.y - 8);
 

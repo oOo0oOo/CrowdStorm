@@ -41,7 +41,7 @@ $(document).foundation();
 $(document).on('click', '#startStorm', function(event){
     event.preventDefault();
 
-    window.csClient = $(document).csClient({server: 'ws://37.218.249.19:8080/cs/ws', user: $('#userName').val()});
+    window.csClient = $.fn.csClient({server: 'ws://37.218.249.19:8080/cs/ws', user: $('#userName').val()});
     $(document).trigger('loggedin');
 });
 
@@ -60,7 +60,20 @@ $(document).on('newedge', function(event, params) {
 });
 
 $(document).on('servernode', function(event, node) {
-    var params = {label: node.content, guid: node.guid, size: 45, color: '#20A0B0', style: 'square'};
+    var colors = ['#20A0B0', '#6A4A3C', '#CC333F', '#EB6841', '#EDC951'];
+
+    function hashCode(str){
+        var hash = 0;
+        if (str.length == 0) return hash;
+        for (i = 0; i < str.length; i++) {
+            char = str.charCodeAt(i);
+            hash = ((hash<<5)-hash)+char;
+            hash = hash & hash;
+        }
+        return hash;
+    }
+
+    var params = {label: node.content, guid: node.guid, size: 50, color: colors[hashCode(csClient.settings.user) % colors.length], style: 'circle'};
     $(document).trigger('drawnode', params);
 });
 
@@ -84,4 +97,11 @@ $(document).on('serveredge', function(event, edge) {
 
     var params = {source: sourceNode, target: targetNode, data: {}};
     $(document).trigger('drawedge', params);
+});
+
+$(window).on('resize', function(event) {
+    var $canvas = $('#stormCanvas').first();
+
+    $canvas.attr('width',$canvas.parent().width());
+    $canvas.attr('height',$canvas.parent().height());
 });

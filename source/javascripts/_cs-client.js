@@ -40,11 +40,13 @@ var sampleMessages = [
             user: 'Default User'
         };
 
-        var settings = $.extend({}, defaults, args);
-        var socket = new WebSocket(settings.server);
+        var client = this;
+
+        client.settings = $.extend({}, defaults, args);
+        var socket = new WebSocket(client.settings.server);
 
         socket.onopen = function () {
-            socket.send('name:' + settings.user);
+            socket.send('name:' + client.settings.user);
         }
 
         socket.onmessage = function (event) {
@@ -69,14 +71,14 @@ var sampleMessages = [
 
         this.generateAndSendNode = function(content) {
             var generatedGuid = guid();
-            var node = {type: 'node', guid: generatedGuid, time: new Date().getTime(), user: settings.user, content: content};
+            var node = {type: 'node', guid: generatedGuid, time: new Date().getTime(), user: client.settings.user, content: content};
             socket.send(JSON.stringify(node));
             return node;
         }
 
         this.generateAndSendEdge = function(params) {
             var generatedGuid = guid();
-            var edge = {type: 'edge', guid: generatedGuid, time: new Date().getTime(), user: settings.user, source: params.source.data.guid, target: params.target.data.guid};
+            var edge = {type: 'edge', guid: generatedGuid, time: new Date().getTime(), user: client.settings.user, source: params.source.data.guid, target: params.target.data.guid};
             socket.send(JSON.stringify(edge));
             return edge;
         }

@@ -70,6 +70,24 @@ body {
       font-size: emCalc(24px);
       font-weight: 200;
     }
+
+    &.go-away {
+      height: 50px;
+      margin-bottom: 0;
+      overflow: hidden;
+
+      > h1, h2 {
+        padding-top: 0.5em;
+        float: left;
+        font-size: $page-header-font-size / 5;
+      }
+
+      p.tagline {
+        padding-top: 0.8em;
+        font-size: emCalc(16px);
+        float: right;
+      }
+    }
   }
 
   > section.introduction {
@@ -80,6 +98,11 @@ body {
   }
 
   > section.storm-plane {
+
+    > canvas {
+      width: 100%;
+      height: 100%;
+    }
 
     &.go-away {
        //TODO: CHange to animate :-)
