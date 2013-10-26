@@ -76,9 +76,26 @@ jQuery.fn.springy = function(params) {
 	var nearest = null;
 	var dragged = null;
 
+
+    // Set mass of all nodes (their representation in layout)
+    var set_node_masses = function(mass){
+        layout.eachNode(function(n, p){
+            p.m = mass;
+        });
+    };
+
 	jQuery(canvas).mousedown(function(e) {
-		var pos = jQuery(this).offset();
-		var p = fromScreen({x: e.pageX - pos.left, y: e.pageY - pos.top});
+        var pos = jQuery(this).offset();
+        var p = fromScreen({x: e.pageX - pos.left, y: e.pageY - pos.top});
+
+        // Check if one of the delete buttons is clicked: Fuck i hate doing this...
+        layout.eachSpring(function(spring){
+            mid_x = (spring.point1.p.x  + spring.point2.p.x)/2;
+            mid_y = (spring.point1.p.y  + spring.point2.p.y)/2;
+            console.log(mid_x + '      ' + mid_y);
+        });
+
+        set_node_masses(25000);
 		selected = nearest = dragged = layout.nearest(p);
 
 		if (selected.node !== null) {
@@ -92,15 +109,58 @@ jQuery.fn.springy = function(params) {
 		renderer.start();
 	});
 
-	// Basic double click handler
+    /// Finish half-assed drag and drop (adding drop)
+    jQuery(canvas).mouseup(function(e) {
+        var p = jQuery(this).offset();
+        var pos = fromScreen({x: e.pageX - p.left, y: e.pageY - p.top});
+
+        // Find the second closest (closest is always nod itself)
+        var min = {node: null, distance: null};
+        var second = {node: null, distance: null};
+
+        var t = layout;
+        t.graph.nodes.forEach(function(n){
+            var point = t.point(n);
+            var distance = point.p.subtract(pos).magnitude();
+            if (min.distance == null || distance < min.distance) {
+                second = min;
+                min = {node: n, distance: distance};
+            }
+        });
+
+        set_node_masses(1);
+
+        if (second.node === null || second.distance > 1.0){
+            dragged = null;
+            return false;
+        };
+
+        if (dragged !== null && dragged.node !== null) {
+            dragged = null;
+            var params = { source: min.node, target: second.node, data: {}};
+            var e = jQuery.Event( 'newedge', {params: params});
+            $(document).trigger( e );
+        }
+    });
+
+
+	/// Basic double click handler
 	jQuery(canvas).dblclick(function(e) {
 		var pos = jQuery(this).offset();
 		var p = fromScreen({x: e.pageX - pos.left, y: e.pageY - pos.top});
-		selected = layout.nearest(p);
+        var content = prompt('New Content:', '');
+
+        // Trigger New Node Event
+        var e = jQuery.Event( 'newnode', { content: content } );
+        $(document).trigger( e );
+
+		/*
+        selected = layout.nearest(p);
 		node = selected.node;
 		if (node && node.data && node.data.ondoubleclick) {
 			node.data.ondoubleclick();
 		}
+		*/
 	});
 
 	jQuery(canvas).mousemove(function(e) {
@@ -116,9 +176,11 @@ jQuery.fn.springy = function(params) {
 		renderer.start();
 	});
 
+    /*
 	jQuery(window).bind('mouseup',function(e) {
 		dragged = null;
 	});
+	*/
 
 	Springy.Node.prototype.getWidth = function() {
 		var text = (this.data.label !== undefined) ? this.data.label : this.id;
@@ -238,6 +300,26 @@ jQuery.fn.springy = function(params) {
 				ctx.restore();
 			}
 
+            var mid_x =  (x1+x2)/2;
+            var mid_y =  (y1+y2)/2;
+
+            /// Remove Edge Button
+            ctx.fillStyle = "#CC333F";
+            ctx.beginPath();
+            ctx.arc(mid_x, mid_y, 10, 0, Math.PI*2, true);
+            ctx.closePath();
+            ctx.fill();
+
+            /// And the minus sign
+            ctx.strokeStyle = "#EDC951";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(mid_x -4 , mid_y);
+            ctx.lineTo(mid_x + 4, mid_y);
+            ctx.stroke();
+            ctx.restore();
+
+
 		},
 		function drawNode(node, p) {
 			var s = toScreen(p);
@@ -247,25 +329,45 @@ jQuery.fn.springy = function(params) {
 			var boxWidth = node.getWidth();
 			var boxHeight = node.getHeight();
 
-			// clear background
-			ctx.clearRect(s.x - boxWidth/2, s.y - 10, boxWidth, 20);
+            // Draw a circle
+            var d = node.data;
+            if (d.color !== undefined && d.size !== undefined
+                    && d.style !== undefined){
+                ctx.fillStyle = d.color;
+                ctx.beginPath();
+                switch(d.style){
+                    case 'circle':
+                        ctx.arc(s.x, s.y, d.size, 0, Math.PI*2, true);
+                        break;
 
-			// fill background
-			if (selected !== null && nearest.node !== null && selected.node.id === node.id) {
-				ctx.fillStyle = "#FFFFE0";
-			} else if (nearest !== null && nearest.node !== null && nearest.node.id === node.id) {
-				ctx.fillStyle = "#EEEEEE";
-			} else {
-				ctx.fillStyle = "#FFFFFF";
-			}
-			ctx.fillRect(s.x - boxWidth/2, s.y - 10, boxWidth, 20);
+                    case 'square':
+                        ctx.rect(s.x- d.size/2, s.y - d.size/2, d.size, d.size);
+                        break;
+                }
 
+                ctx.closePath();
+                ctx.fill();
+
+            } else {
+                // clear background
+                ctx.clearRect(s.x - boxWidth/2, s.y - 10, boxWidth, 20);
+                // fill background
+                 if (selected !== null && nearest.node !== null && selected.node.id === node.id) {
+                 ctx.fillStyle = "#FFFFE0";
+                 } else if (nearest !== null && nearest.node !== null && nearest.node.id === node.id) {
+                 ctx.fillStyle = "#EEEEEE";
+                 } else {
+                 ctx.fillStyle = "#FFFFFF";
+                 }
+                 ctx.fillRect(s.x - boxWidth/2, s.y - 10, boxWidth, 20);
+
+            };
 			ctx.textAlign = "left";
 			ctx.textBaseline = "top";
 			ctx.font = "16px Verdana, sans-serif";
 			ctx.fillStyle = "#000000";
 			ctx.font = "16px Verdana, sans-serif";
-			var text = (node.data.label !== undefined) ? node.data.label : node.id;
+			var text = (d.label !== undefined) ? d.label : node.id;
 			ctx.fillText(text, s.x - boxWidth/2 + 5, s.y - 8);
 
 			ctx.restore();
