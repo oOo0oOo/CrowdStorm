@@ -12,7 +12,7 @@ var State = function() {
 };
 
 // Calculate a  state from the log file up until time_stamp
-var reconstruct_state(log_file, time_stamp){
+var reconstruct_state = function(log_file, time_stamp){
     state = State();
 
     // Loop through log in reverse order
@@ -24,20 +24,34 @@ var reconstruct_state(log_file, time_stamp){
             break;
         };
 
-        // Add nodes or edges
-        if(data instanceof Object) {
-            switch(data.type){
-                case 'node':
-                    state.nodes.push(data);
-                    break;
-                case 'link':
-                    state.links.push(data);
-                    break;
-            }
-        };
+        // Perform change to state
+        switch(data.type){
+            case 'node':
+                state.nodes.push(data);
+                break;
+            case 'link':
+                state.links.push(data);
+                break;
+        }
     };
-
     return state;
+};
 
+
+// Trigger the necessary events for a given state
+var trigger_drawing = function(state){
+    // Nodes
+    state.node.forEach(function(n){
+        $(document).trigger('drawnode', n.data);
+    });
+    // And edges
+    state.links.forEach(function(l){
+        // find involved nodes
+        var filter1 = function(n){return (n.guid == l.nodeA)};
+        var filter2 = function(n){return (n.guid == l.nodeB)};
+        var node1 = graph.filterNodes(filter1);
+        var node2 = graph.filterNodes(filter2);
+        $(document).trigger('drawedge', {source: node1, target: node2, data: {}});
+    };
 };
 
