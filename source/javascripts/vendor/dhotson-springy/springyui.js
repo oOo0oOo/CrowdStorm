@@ -138,21 +138,21 @@ jQuery.fn.springy = function(params) {
         if (dragged !== null && dragged.node !== null) {
             dragged = null;
             var params = { source: min.node, target: second.node, data: {}};
-            var e = jQuery.Event( 'newedge', {params: params});
-            $(document).trigger( e );
+            $(document).trigger('newedge', params);
         }
     });
 
 
 	/// Basic double click handler
 	jQuery(canvas).dblclick(function(e) {
+        e.preventDefault();
+
 		var pos = jQuery(this).offset();
 		var p = fromScreen({x: e.pageX - pos.left, y: e.pageY - pos.top});
         var content = prompt('New Content:', '');
 
         // Trigger New Node Event
-        var e = jQuery.Event( 'newnode', { content: content } );
-        $(document).trigger( e );
+        $(document).trigger('newnode', content);
 
 		/*
         selected = layout.nearest(p);

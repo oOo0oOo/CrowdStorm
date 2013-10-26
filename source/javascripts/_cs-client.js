@@ -48,15 +48,30 @@ var sampleMessages = [
         }
 
         socket.onmessage = function (event) {
-            var data = JSON.parse(event.data);
+            var data;
+
+            try {
+                data = JSON.parse(event.data);
+            } catch(e) {
+                return;
+            }
+
             if(data instanceof Object) {
                 nodeMap.push(data);
 
                 if(data.type === "node") {
-
+                    $(document).trigger('servernode', data);
                 }
             }
         };
+
+        this.generateAndSendNode = function(content) {
+            var generatedGuid = guid();
+            var node = {type: 'node', guid: generatedGuid, time: new Date().getTime(), user: settings.user, content: content};
+            nodeMap.push(node);
+            socket.send(JSON.stringify(node));
+            return node;
+        }
 
         return this;
     };

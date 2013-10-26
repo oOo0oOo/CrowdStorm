@@ -39,10 +39,21 @@ $(document).foundation();
 $(document).on('click', '#startStorm', function(event){
     event.preventDefault();
 
-    window.csClient = $(document).csClient({user: $('#userName').val()});
+    window.csClient = $(document).csClient({server: 'ws://37.218.249.19:8080/cs/ws', user: $('#userName').val()});
     $(document).trigger('loggedin');
 });
 
 $(document).on('loggedin', function() {
+    $('header.page-header').addClass('go-away');
+    $('section.introduction').addClass('go-away');
+    $('section.storm-plane').removeClass('go-away');
+});
 
+$(document).on('newnode', function(event, content) {
+    csClient.generateAndSendNode(content);
+});
+
+$(document).on('servernode', function(event, node) {
+    var params = {label: node.content, guid: node.guid, size: 45, color: '#20A0B0', style: 'square'};
+    $(document).trigger('drawnode', { params: params });
 });

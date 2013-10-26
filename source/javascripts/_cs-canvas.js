@@ -10,7 +10,7 @@ $( document ).ready(function() {
     var initial_node = graph.newNode({label: 'Parent', guid: '1', size: 40, color: '#EDC951', style: 'circle'});
 
     // Initialize springy
-    var springy = window.springy = jQuery('#graphdemo').springy({
+    var springy = window.springy = jQuery('#stormCanvas').springy({
         graph: graph,
         stiffness: 300.0,
         repulsion: 400.0,
@@ -40,28 +40,26 @@ $( document ).ready(function() {
     */
 
     // Node Drawing Event Listener
-    $(document).bind('drawnode', function(data){
+    $(document).bind('drawnode', function(event, data){
         graph.newNode(data.params);
     });
 
     // Edge drawing event listener
-    $(document).bind('drawedge', function(data){
-        var p = data.params;
-        graph.newEdge(p.source, p.target, p.data);
+    $(document).bind('drawedge', function(event, data){
+        graph.newEdge(data.params.source, data.params.target, data.params.data);
     });
 
 
     // NODE MOCK REDIRECT
-    $(document).bind('newnode', function(data){
+    /*$(document).bind('newnode', function(data){
         var params = {label: data.content, guid: '1', size: 45, color: '#20A0B0', style: 'square'};
         var e = jQuery.Event( 'drawnode', { params: params } );
         $(document).trigger( e );
-    });
+    });*/
 
     // EDGE MOCK REDIRECT
-    $(document).bind('newedge', function(data){
-        var e = jQuery.Event( 'drawedge', {params: data.params} );
-        $(document).trigger( e );
+    $(document).bind('newedge', function(event, params){
+        $(document).trigger('drawedge', params );
     });
 
 

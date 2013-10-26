@@ -51,12 +51,11 @@
 
 
 body {
-  > header {
+  > header.page-header {
     height: 300px;
     margin-bottom: 30px;
     @include box-shadow(inset 0 0 202px rgba(237,201,81,.23));
     @include background-image(linear-gradient(-61deg, #cc333f, #eb6841));
-
 
     > h1, h2 {
       font-family: $page-header-font;
@@ -70,6 +69,21 @@ body {
       color: #671e1e;
       font-size: emCalc(24px);
       font-weight: 200;
+    }
+  }
+
+  > section.introduction {
+    &.go-away {
+      //TODO: Animate
+      display: none;
+    }
+  }
+
+  > section.storm-plane {
+
+    &.go-away {
+       //TODO: CHange to animate :-)
+       display: none;
     }
   }
 }
