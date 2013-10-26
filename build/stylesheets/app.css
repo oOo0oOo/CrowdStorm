@@ -4676,22 +4676,54 @@ body > header.page-header {
   background-image: -webkit-linear-gradient(-61deg, #cc333f, #eb6841);
   background-image: -moz-linear-gradient(-61deg, #cc333f, #eb6841);
   background-image: -o-linear-gradient(-61deg, #cc333f, #eb6841);
-  background-image: linear-gradient(-61deg, #cc333f, #eb6841); }
-  /* line 60, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+  background-image: linear-gradient(-61deg, #cc333f, #eb6841);
+  -webkit-transition: height 0.2s ease-out;
+  -moz-transition: height 0.2s ease-out;
+  -o-transition: height 0.2s ease-out;
+  transition: height 0.2s ease-out; }
+  /* line 61, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
   body > header.page-header > h1, body > header.page-header h2 {
     font-family: "Fredoka One", cursive;
     font-size: 6.25em;
     color: #671e1e;
     text-shadow: 0 1px #c9674b;
     margin-bottom: 0.1em; }
-  /* line 68, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+  @media screen and (max-width: 750px) {
+    /* line 70, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+    body > header.page-header > h1, body > header.page-header h2 {
+      font-size: 4.375em; } }
+  /* line 75, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
   body > header.page-header p.tagline {
     color: #671e1e;
     font-size: 1.5em;
     font-weight: 200; }
-/* line 76, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+  /* line 81, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+  body > header.page-header.go-away {
+    height: 50px;
+    margin-bottom: 0;
+    overflow: hidden; }
+    /* line 86, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+    body > header.page-header.go-away > h1, body > header.page-header.go-away h2 {
+      padding-top: 0.5em;
+      float: left;
+      font-size: 1.25em; }
+    /* line 92, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+    body > header.page-header.go-away p.tagline {
+      padding-top: 0.8em;
+      font-size: 1em;
+      float: right; }
+/* line 101, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
 body > section.introduction.go-away {
   display: none; }
-/* line 84, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+/* line 109, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
+body > section.storm-plane > canvas {
+  width: 100%;
+  height: 100%;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+/* line 119, /home/gkunz/hackaton/crowdstorming/source/stylesheets/app.scss */
 body > section.storm-plane.go-away {
   display: none; }

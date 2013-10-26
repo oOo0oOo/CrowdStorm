@@ -17,28 +17,6 @@ $( document ).ready(function() {
         damping: 0.3
     });
 
-    /*
-    // Set mass of all nodes (their representation in layout)
-    var set_node_masses = function(mass){
-        springy.layout.eachNode(function(n, p){
-            p.m = mass;
-        });
-    };
-
-    // Stop all movement when dragging
-    $(document).on('mousedown', '#graphdemo', function(){
-        set_node_masses(10000);
-    });
-
-    // Detect drop and set back mass
-    $(document).on('mouseup', '#graphdemo', function(e){
-        // var pos = $('#graphdemo').offset();
-        // var n = springy.layout.nearest(pos);
-        set_node_masses(1);
-    });
-
-    */
-
     // Node Drawing Event Listener
     $(document).bind('drawnode', function(event, params){
         graph.newNode(params);
@@ -48,29 +26,4 @@ $( document ).ready(function() {
     $(document).bind('drawedge', function(event, params){
         graph.newEdge(params.source, params.target, params.data);
     });
-
-
-    // NODE MOCK REDIRECT
-    /*$(document).bind('newnode', function(data){
-        var params = {label: data.content, guid: '1', size: 45, color: '#20A0B0', style: 'square'};
-        var e = jQuery.Event( 'drawnode', { params: params } );
-        $(document).trigger( e );
-    });*/
-
-    // EDGE MOCK REDIRECT
-    /*$(document).bind('newedge', function(event, params){
-        $(document).trigger('drawedge', params );
-    });*/
-
-
-    // Add a random node
-    $(document).on('click', '#add_random_node', function(){
-        // Set masses low to enable layouting
-        var size = 25 + Math.random() * 30;
-        var new_node = graph.newNode({label: 'Child', guid: '2', color: '#00A0B0', size: size, style: 'square'});
-
-        // Link with inital node
-        graph.newEdge(initial_node, new_node, {color: '#EB6841', guid: '3'});
-    });
-
 });

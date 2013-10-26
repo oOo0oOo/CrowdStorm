@@ -47,6 +47,7 @@ var sampleMessages = [
 
         socket.onopen = function () {
             socket.send('name:' + client.settings.user);
+            socket.send('hist');
         }
 
         socket.onmessage = function (event) {
@@ -65,6 +66,19 @@ var sampleMessages = [
                     $(document).trigger('servernode', data);
                 } else if(data.type === 'edge') {
                     $(document).trigger('serveredge', data);
+                } else if(data.type === 'history') {
+                    nodeMap = [];
+                    $(document).trigger('cleargraph');
+
+                    for(var i = 0; i < data.history.length; i++) {
+                        console.log(data.history[i]);
+
+                        if(data.history[i].type === "node") {
+                            $(document).trigger('servernode', data.history[i]);
+                        } else if(data.history[i].type === "edge") {
+                            $(document).trigger('serveredge', data.history[i]);
+                        }
+                    }
                 }
             }
         };

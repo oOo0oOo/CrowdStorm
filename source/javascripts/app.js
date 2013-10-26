@@ -82,7 +82,7 @@ $(document).on('serveredge', function(event, edge) {
     function findNodeByGuid(guid) {
         var foundNode;
 
-        springy.layout.graph.nodes.forEach(function(n){
+        springy.graph.nodes.forEach(function(n){
             if(n.data.guid === guid) {
                 foundNode = n;
                 return false;
@@ -104,4 +104,14 @@ $(window).on('resize', function(event) {
 
     $canvas.attr('width',$canvas.parent().width());
     $canvas.attr('height',$canvas.parent().height());
+});
+
+$(document).on('cleargraph', function() {
+    springy.graph.nodeSet = {};
+    springy.graph.edges = [];
+    springy.graph.nodes = [];
+    springy.graph.adjacency = {};
+    springy.graph.notify();
+
+    $(window).trigger('resize');
 });

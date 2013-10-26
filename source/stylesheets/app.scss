@@ -56,6 +56,7 @@ body {
     margin-bottom: 30px;
     @include box-shadow(inset 0 0 202px rgba(237,201,81,.23));
     @include background-image(linear-gradient(-61deg, #cc333f, #eb6841));
+    @include transition(height 0.2s ease-out);
 
     > h1, h2 {
       font-family: $page-header-font;
@@ -63,6 +64,12 @@ body {
       color: #671e1e;
       text-shadow: 0 1px #c9674b;
       margin-bottom: 0.1em;
+    }
+
+    @media screen and (max-width: 750px) {
+      > h1, h2 {
+        font-size: $page-header-font-size * 0.7;
+      }
     }
 
     p.tagline {
@@ -102,6 +109,11 @@ body {
     > canvas {
       width: 100%;
       height: 100%;
+      -moz-user-select     : none;
+      -khtml-user-select   : none;
+      -webkit-user-select  : none;
+      -o-user-select       : none;
+      user-select          : none;
     }
 
     &.go-away {

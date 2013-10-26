@@ -14415,9 +14415,9 @@ jQuery.fn.springy = function(params) {
             };
 			ctx.textAlign = "left";
 			ctx.textBaseline = "top";
-			ctx.font = "16px Verdana, sans-serif";
-			ctx.fillStyle = "#000000";
-			ctx.font = "16px Verdana, sans-serif";
+			ctx.font = "16px 'Lato', sans-serif";
+			ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
+			ctx.font = "16px 'Lato', sans-serif";
 			var text = (d.label !== undefined) ? d.label : node.id;
 			ctx.fillText(text, s.x - boxWidth/2 + 5, s.y - 8);
 
@@ -14673,11 +14673,14 @@ var sampleMessages = [
             user: 'Default User'
         };
 
-        var settings = $.extend({}, defaults, args);
-        var socket = new WebSocket(settings.server);
+        var client = this;
+
+        client.settings = $.extend({}, defaults, args);
+        var socket = new WebSocket(client.settings.server);
 
         socket.onopen = function () {
-            socket.send('name:' + settings.user);
+            socket.send('name:' + client.settings.user);
+            socket.send('hist');
         }
 
         socket.onmessage = function (event) {
@@ -14696,20 +14699,33 @@ var sampleMessages = [
                     $(document).trigger('servernode', data);
                 } else if(data.type === 'edge') {
                     $(document).trigger('serveredge', data);
+                } else if(data.type === 'history') {
+                    nodeMap = [];
+                    $(document).trigger('cleargraph');
+
+                    for(var i = 0; i < data.history.length; i++) {
+                        console.log(data.history[i]);
+
+                        if(data.history[i].type === "node") {
+                            $(document).trigger('servernode', data.history[i]);
+                        } else if(data.history[i].type === "edge") {
+                            $(document).trigger('serveredge', data.history[i]);
+                        }
+                    }
                 }
             }
         };
 
         this.generateAndSendNode = function(content) {
             var generatedGuid = guid();
-            var node = {type: 'node', guid: generatedGuid, time: new Date().getTime(), user: settings.user, content: content};
+            var node = {type: 'node', guid: generatedGuid, time: new Date().getTime(), user: client.settings.user, content: content};
             socket.send(JSON.stringify(node));
             return node;
         }
 
         this.generateAndSendEdge = function(params) {
             var generatedGuid = guid();
-            var edge = {type: 'edge', guid: generatedGuid, time: new Date().getTime(), user: settings.user, source: params.source.data.guid, target: params.target.data.guid};
+            var edge = {type: 'edge', guid: generatedGuid, time: new Date().getTime(), user: client.settings.user, source: params.source.data.guid, target: params.target.data.guid};
             socket.send(JSON.stringify(edge));
             return edge;
         }
@@ -14738,28 +14754,6 @@ $( document ).ready(function() {
         damping: 0.3
     });
 
-    /*
-    // Set mass of all nodes (their representation in layout)
-    var set_node_masses = function(mass){
-        springy.layout.eachNode(function(n, p){
-            p.m = mass;
-        });
-    };
-
-    // Stop all movement when dragging
-    $(document).on('mousedown', '#graphdemo', function(){
-        set_node_masses(10000);
-    });
-
-    // Detect drop and set back mass
-    $(document).on('mouseup', '#graphdemo', function(e){
-        // var pos = $('#graphdemo').offset();
-        // var n = springy.layout.nearest(pos);
-        set_node_masses(1);
-    });
-
-    */
-
     // Node Drawing Event Listener
     $(document).bind('drawnode', function(event, params){
         graph.newNode(params);
@@ -14769,32 +14763,65 @@ $( document ).ready(function() {
     $(document).bind('drawedge', function(event, params){
         graph.newEdge(params.source, params.target, params.data);
     });
-
-
-    // NODE MOCK REDIRECT
-    /*$(document).bind('newnode', function(data){
-        var params = {label: data.content, guid: '1', size: 45, color: '#20A0B0', style: 'square'};
-        var e = jQuery.Event( 'drawnode', { params: params } );
-        $(document).trigger( e );
-    });*/
-
-    // EDGE MOCK REDIRECT
-    /*$(document).bind('newedge', function(event, params){
-        $(document).trigger('drawedge', params );
-    });*/
-
-
-    // Add a random node
-    $(document).on('click', '#add_random_node', function(){
-        // Set masses low to enable layouting
-        var size = 25 + Math.random() * 30;
-        var new_node = graph.newNode({label: 'Child', guid: '2', color: '#00A0B0', size: size, style: 'square'});
-
-        // Link with inital node
-        graph.newEdge(initial_node, new_node, {color: '#EB6841', guid: '3'});
-    });
-
 });
+/**
+ * Created with JetBrains RubyMine.
+ * User: webdev
+ * Date: 10/26/13
+ * Time: 12:38 PM
+ * To change this template use File | Settings | File Templates.
+ */
+
+
+var State = function() {
+    this.nodes = [];
+    this.links = [];
+};
+
+// Calculate a  state from the log file up until time_stamp
+var reconstruct_state = function(log_file, time_stamp){
+    state = State();
+
+    // Loop through log in reverse order
+    for (var i=log_file.length;i==0;i--){
+        var event = log_file[i];
+
+        // End if at desired point in time
+        if (event.time > time_stamp){
+            break;
+        };
+
+        // Perform change to state
+        switch(data.type){
+            case 'node':
+                state.nodes.push(data);
+                break;
+            case 'link':
+                state.links.push(data);
+                break;
+        }
+    };
+    return state;
+};
+
+
+// Trigger the necessary events for a given state
+var trigger_drawing = function(state){
+    // Nodes
+    state.node.forEach(function(n){
+        $(document).trigger('drawnode', n.data);
+    });
+    // And edges
+    state.links.forEach(function(l){
+        // find involved nodes
+        var filter1 = function(n){return (n.guid == l.source)};
+        var filter2 = function(n){return (n.guid == l.target)};
+        var node1 = graph.filterNodes(filter1);
+        var node2 = graph.filterNodes(filter2);
+        $(document).trigger('drawedge', {source: node1, target: node2, data: {}});
+    });
+};
+
 // Require either Zepto
 // require vendor/zepto
 
@@ -14831,12 +14858,14 @@ $( document ).ready(function() {
 
 
 
+
+
 $(document).foundation();
 
 $(document).on('click', '#startStorm', function(event){
     event.preventDefault();
 
-    window.csClient = $(document).csClient({server: 'ws://37.218.249.19:8080/cs/ws', user: $('#userName').val()});
+    window.csClient = $.fn.csClient({server: 'ws://37.218.249.19:8080/cs/ws', user: $('#userName').val()});
     $(document).trigger('loggedin');
 });
 
@@ -14855,7 +14884,20 @@ $(document).on('newedge', function(event, params) {
 });
 
 $(document).on('servernode', function(event, node) {
-    var params = {label: node.content, guid: node.guid, size: 45, color: '#20A0B0', style: 'square'};
+    var colors = ['#20A0B0', '#6A4A3C', '#CC333F', '#EB6841', '#EDC951'];
+
+    function hashCode(str){
+        var hash = 0;
+        if (str.length == 0) return hash;
+        for (i = 0; i < str.length; i++) {
+            char = str.charCodeAt(i);
+            hash = ((hash<<5)-hash)+char;
+            hash = hash & hash;
+        }
+        return hash;
+    }
+
+    var params = {label: node.content, guid: node.guid, size: 50, color: colors[hashCode(csClient.settings.user) % colors.length], style: 'circle'};
     $(document).trigger('drawnode', params);
 });
 
@@ -14864,7 +14906,7 @@ $(document).on('serveredge', function(event, edge) {
     function findNodeByGuid(guid) {
         var foundNode;
 
-        springy.layout.graph.nodes.forEach(function(n){
+        springy.graph.nodes.forEach(function(n){
             if(n.data.guid === guid) {
                 foundNode = n;
                 return false;
@@ -14877,6 +14919,23 @@ $(document).on('serveredge', function(event, edge) {
     var sourceNode = findNodeByGuid(edge.source);
     var targetNode = findNodeByGuid(edge.target);
 
-    var params = {source: sourceNode, target: targetNode};
+    var params = {source: sourceNode, target: targetNode, data: {}};
     $(document).trigger('drawedge', params);
+});
+
+$(window).on('resize', function(event) {
+    var $canvas = $('#stormCanvas').first();
+
+    $canvas.attr('width',$canvas.parent().width());
+    $canvas.attr('height',$canvas.parent().height());
+});
+
+$(document).on('cleargraph', function() {
+    springy.graph.nodeSet = {};
+    springy.graph.edges = [];
+    springy.graph.nodes = [];
+    springy.graph.adjacency = {};
+    springy.graph.notify();
+
+    $(window).trigger('resize');
 });
