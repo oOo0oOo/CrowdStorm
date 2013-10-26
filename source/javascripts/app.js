@@ -34,6 +34,8 @@
 
 //= require _cs-canvas.js
 
+//= require _cs-time-machine.js
+
 $(document).foundation();
 
 $(document).on('click', '#startStorm', function(event){
