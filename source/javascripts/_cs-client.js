@@ -49,7 +49,7 @@ var sampleMessages = [
 
         socket.onmessage = function (event) {
             var data = JSON.parse(event.data);
-            if(data instanceof Object && (data.type === "node" || data.type == "")) {
+            if(data instanceof Object && (data.type === "node" || data.type == "link")) {
                 nodeMap.push(data);
             }
         };

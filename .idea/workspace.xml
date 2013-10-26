@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7381eca7-8f2d-4672-91f4-328817318b64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/_cs-client.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/vendor/jquery.gracefulWebSocket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/crowdstorming.iml" afterPath="$PROJECT_DIR$/.idea/crowdstorming.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/stylesheets/_settings.scss" afterPath="$PROJECT_DIR$/source/stylesheets/_settings.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/javascripts/app.js" afterPath="$PROJECT_DIR$/source/javascripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/stylesheets/app.scss" afterPath="$PROJECT_DIR$/source/stylesheets/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index.html.erb" afterPath="$PROJECT_DIR$/source/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/javascripts/_cs-client.js" afterPath="$PROJECT_DIR$/source/javascripts/_cs-client.js" />
     </list>
     <ignored path="crowdstorming.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_foundation.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_foundation.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/stylesheets/_foundation.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="26" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+            <state line="8" column="42" selection-start="280" selection-end="280" vertical-scroll-proportion="0.16608997">
               <folding />
             </state>
           </provider>
@@ -78,7 +71,7 @@
       <file leaf-file-name="_settings.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/stylesheets/_settings.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="28" selection-start="143" selection-end="143" vertical-scroll-proportion="-3.6">
+            <state line="9" column="62" selection-start="199" selection-end="199" vertical-scroll-proportion="-6.48">
               <folding />
             </state>
           </provider>
@@ -116,16 +109,16 @@
       <file leaf-file-name="_cs-client.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/javascripts/_cs-client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="32" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0">
+            <state line="44" column="8" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="160" selection-start="986" selection-end="986" vertical-scroll-proportion="0.41233373">
+            <state line="42" column="24" selection-start="1215" selection-end="1215" vertical-scroll-proportion="-17.296297">
               <folding />
             </state>
           </provider>
@@ -154,15 +147,15 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/source/javascripts/app.js" />
         <option value="$PROJECT_DIR$/source/javascripts/vendor/jquery.gracefulWebSocket.js" />
-        <option value="$PROJECT_DIR$/source/javascripts/_cs-client.js" />
         <option value="$PROJECT_DIR$/source/stylesheets/_settings.scss" />
         <option value="$PROJECT_DIR$/source/stylesheets/app.scss" />
         <option value="$PROJECT_DIR$/source/index.html.erb" />
+        <option value="$PROJECT_DIR$/source/javascripts/_cs-client.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
+    <option name="x" value="-1856" />
     <option name="y" value="-4" />
     <option name="width" value="1857" />
     <option name="height" value="1018" />
@@ -536,7 +529,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1018" extended-state="6" />
+    <frame x="-1856" y="-4" width="1857" height="1018" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -663,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/javascripts/_cs-client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="32" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/javascripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="12" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
@@ -686,23 +672,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/stylesheets/_settings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="28" selection-start="143" selection-end="143" vertical-scroll-proportion="-3.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/stylesheets/foundation/components/_type.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="51" selection-start="664" selection-end="676" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/stylesheets/_foundation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -723,7 +695,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="160" selection-start="986" selection-end="986" vertical-scroll-proportion="0.41233373">
+        <state line="42" column="24" selection-start="1215" selection-end="1215" vertical-scroll-proportion="-17.296297">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/stylesheets/_settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="62" selection-start="199" selection-end="199" vertical-scroll-proportion="-6.48">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/javascripts/_cs-client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="8" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/stylesheets/_foundation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="42" selection-start="280" selection-end="280" vertical-scroll-proportion="0.16608997">
           <folding />
         </state>
       </provider>
